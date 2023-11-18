@@ -172,6 +172,43 @@ nav ul li a:hover{
     background-color: #FF5733;
 }
 
+/* css quanli nguoi dung */
+
+.item {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    margin-bottom: 150px;
+    margin-top: 100px;
+    place-content: center;
+    gap: 30px
+}
+
+
+.item > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    padding: 20px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    border-image: initial;
+}
+.item > div a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.item > div:hover{
+    background-color:  #F09116;  
+}
+
+.item > div a:hover{
+    color: rgb(255, 255, 255);
+}
+
+
 /* css footer */
 
 footer{
