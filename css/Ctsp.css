@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: aqua; */
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    color: #000000;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+     /* Căn giữa các phần tử trong header */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    /* position: relative; */
+}
+.placeholder {
+    height: 100px; /* Đặt chiều cao tương đương với thanh header */
+}
+
+.logo {
+    width: 100px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+.logo img {
+    width: 100px;
+    
+}
+.menu{
+    height: 40px;
+    background-color: #00472C;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    /* align-items: center; */
+    padding-top:10px ;
+}
+
+nav ul li {
+    margin-left: 80px;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:  #ffffff;
+}
+nav ul li a:hover{
+    color: #c6c6c6;
+}
+.search {
+    margin-left: 20px;
+}
+
+.search input {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 700px;
+    
+}
+.button{
+    background: #F09116;
+    width: 90px;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+.button:hover{
+    background-color: #0093ad;
+
+}
+.btn-button {
+    background-color: #F09116;
+    
+    color: #fff;
+    width: 90px;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* display: flex; */
+    /* text-align: center; */
+    border-radius: 3px;
+    align-items: center; /* Căn giữa biểu tượng và văn bản trong nút */
+}
+
+.btn-button:hover {
+    background-color: #0093ad;
+}
+
+main {
+    display: flex;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+main .container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+main .container .pro{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+    padding: 20px 0px;
+}
+
+
+main .container .pro img{
+    width: 300px;
+}
+
+main .container .pro .detail{
+    width: 50%;
+    margin-left: 100px;
+}
+
+main .container .pro .detail h5{
+    font-size: 26px;
+}
+
+main .container .pro .detail .price{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    margin: 50px 0;
+}
+
+main .container .pro .detail .quality{
+    display: flex;
+}
+
+main .container .pro .detail .quality input{
+    max-width: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+main .container .pro .detail .action input{
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+
+main .container .description{
+    padding: 20px;
+}
+
+main .container .description h5{
+    font-size: 26px;
+}
+
+main .container .description img{
+    width: 100px;
+    margin: 10px 0px;
+}
+
+main .container .description p{
+    margin: 10px;
+}
+
+main .container .comment {
+    border: 1px solid #000;
+    padding: 10px;
+    padding-top: 30px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+main .container .comment h5{
+    padding: 0 10px;
+    font-size: 26px;
+    line-height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+
+main .container .comment table {
+    width: 100%;
+}
+
+main .container .comment table td,
+main .container .comment table th{
+    width: calc(100%/3);
+    text-align: center;
+}
+
+main .container .comment table th{
+    padding: 10px;
+}
+
+main .container .comment table td{
+    padding: 10px;
+    border-top: 1px solid #000;
+}
+
+main .container .samePro {
+    border: 1px solid #000;
+    padding: 10px;
+    padding-top: 30px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+main .container .samePro h5{
+    padding: 0 10px;
+    font-size: 26px;
+    line-height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+
+main .container .samePro section{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: #4e4e4e;
+    text-align: center;
+    padding: 25px;
+}
