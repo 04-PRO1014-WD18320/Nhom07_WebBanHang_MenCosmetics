@@ -14,6 +14,7 @@
         <div class="btn">
             <input type="reset" value="RESET">
             <input type="submit" name="themmoi" value="THÊM MỚI DANH MỤC">
+            <button> <a href="index.php?act=listdm">DANH SÁCH DANH MỤC</a></button>
         </div>
         <?php
         if (isset($thongbao) && ($thongbao != "")) {
