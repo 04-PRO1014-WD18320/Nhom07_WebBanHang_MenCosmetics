@@ -6,6 +6,7 @@
     <title>Admin Panel</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../css/formadd.css" />
+    <link rel="stylesheet" href="../css/listdm.css" />
   </head>
   <body>
     <header>
@@ -33,7 +34,7 @@
         >
           <a href="#">Danh mục</a>
           <div class="sub-menu">
-            <a href="#" class="sub-item">Danh mục sách danh mục</a>
+            <a href="index.php?act=listdm" class="sub-item">Danh mục sách danh mục</a>
             <a href="index.php?act=adddm" class="sub-item">Thêm danh mục </a>
           </div>
         </div>

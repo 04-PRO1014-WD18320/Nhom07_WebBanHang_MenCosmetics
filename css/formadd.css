@@ -29,7 +29,42 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.btn input:hover{
+ input:hover{
    background-color: #adacac; 
 }
+.submit{
+    margin-top: 20px;
+}
+table .danhmuc {
+ /* width: 100%; */
+}
+/* CSS cho ô header (th) */
+.danhmuc th {
+    background-color: #4f4f4f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
 
+/* CSS cho các ô dữ liệu (td) */
+.danhmuc td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* CSS cho nút sửa */
+.danhmuc .edit-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.danhmuc .edit-button:hover {
+    background-color: #45a049;
+}
