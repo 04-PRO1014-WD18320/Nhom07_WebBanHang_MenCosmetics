@@ -13,7 +13,7 @@
     </header>
     <nav>
       <div class="menu-item">
-        <div class="item"><a href="#">Trang chủ Admin</a></div>
+        <div class="item"><a href="index.php?act=home">Trang chủ Admin</a></div>
         <div
           class="item"
           onmouseover="toggleSubMenu(this)"
@@ -22,7 +22,7 @@
           <a href="#">Sản phẩm </a>
           <div class="sub-menu">
             <a href="#" class="sub-iatem">Danh sách</a>
-            <a href="#" class="sub-item">Thêm</a>
+            <a href="index.php?act=addsp" class="sub-item">Thêm</a>
           </div>
         </div>
 
