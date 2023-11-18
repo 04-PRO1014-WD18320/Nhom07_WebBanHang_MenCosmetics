@@ -18,9 +18,9 @@
           onmouseover="toggleSubMenu(this)"
           onmouseout="toggleSubMenu(this)"
         >
-          <a href="#">Sản phẩm</a>
+          <a href="#">Sản phẩm </a>
           <div class="sub-menu">
-            <a href="#" class="sub-item">Danh sách</a>
+            <a href="#" class="sub-iatem">Danh sách</a>
             <a href="#" class="sub-item">Thêm</a>
           </div>
         </div>
@@ -33,7 +33,7 @@
           <a href="#">Danh mục</a>
           <div class="sub-menu">
             <a href="#" class="sub-item">Danh sách sản phẩm</a>
-            <a href="#" class="sub-item">Thêm sản phẩm/a>
+            <a href="#" class="sub-item">Thêm sản phẩm </a>
           </div>
         </div>
 
