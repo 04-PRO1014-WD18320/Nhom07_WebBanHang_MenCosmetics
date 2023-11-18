@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/formadd.css" />
   </head>
   <body>
     <header>
@@ -32,8 +33,8 @@
         >
           <a href="#">Danh mục</a>
           <div class="sub-menu">
-            <a href="#" class="sub-item">Danh sách sản phẩm</a>
-            <a href="#" class="sub-item">Thêm sản phẩm </a>
+            <a href="#" class="sub-item">Danh mục sách danh mục</a>
+            <a href="index.php?act=adddm" class="sub-item">Thêm danh mục </a>
           </div>
         </div>
 
