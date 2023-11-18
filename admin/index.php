@@ -14,6 +14,14 @@
             }
             include "danhmuc/add.php";
             break;
+
+        case 'addsp':
+            include "sanpham/add.php";
+            break;
+        case 'home':
+            include "home.php";
+            break;
+
     }
  }
  include "footer.php";
