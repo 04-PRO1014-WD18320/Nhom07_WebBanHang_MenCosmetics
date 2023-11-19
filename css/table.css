@@ -1,0 +1,29 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    
+    margin: 30px 50px  200px 230px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+    
+  }
+  
+  td img{
+    width: 100px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .btn {
+    margin-left: 230px ;
+  }
+  H1{
+    margin-left: 230px;
+  }
