@@ -28,6 +28,8 @@ header {
     height: 100px; /* Đặt chiều cao tương đương với thanh header */
 }
 
+
+
 .logo {
     width: 100px;
     font-weight: bold;
@@ -69,7 +71,7 @@ nav ul li a:hover{
     margin-left: 20px;
 }
 
-.search input {
+.search .ip-search {
     padding: 5px;
     border: 1px solid gray;
     border-radius: 15px;
