@@ -1,3 +1,4 @@
+
 <?php
 // include "../header.php";
 // include "../footer.php";
@@ -34,5 +35,6 @@
         </div>
         <!-- <input type="submit" class="submit" value="THÊM MỚI DANH MỤC"> -->
         <a href="index.php?act=adddm"  ><input type="button" class="submit" value="THÊM MỚI DANH MỤC"></a>
+
     </div>
 </div>

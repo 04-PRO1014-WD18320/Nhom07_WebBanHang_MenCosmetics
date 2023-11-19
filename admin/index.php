@@ -44,6 +44,9 @@
             }
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";   
+        case 'addsp':
+            
+            break;
     }
  }
  include "footer.php";
