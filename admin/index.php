@@ -1,5 +1,7 @@
 <?php
  include "header.php";
+ include "home.php";
+
  include "../model/pdo.php";
  include "../model/danhmuc.php";
 
@@ -14,52 +16,37 @@
             }
             include "danhmuc/add.php";
             break;
-
-        case 'updatedm':
-            include "danhmuc/update.php";
-            break;
-
-
-
-
-
-
-
-
-
-
-        case 'addsp':
-            include "sanpham/add.php";
-            break;
-        case 'editsp':
-            include "sanpham/edit.php";
-            break;
-        case 'home':
-            include "home.php";
-            break;
-        case 'listsp':
-            include "sanpham/list.php";
-            break;
         case 'listdm':
+            $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
-
-
-
-        case 'binhluan':
-             include "home.php";
+        case 'suadm':
+            if(isset($_GET['id']) && ($_GET['id'] > 0)){
+                $dm = loadone_danhmuc($_GET['id']);
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "danhmuc/update.php";
             break;
-        case 'donhang':
-             include "home.php";
-            break;
-        case 'thongke':
-             include "home.php";
-            break;
-        case 'taikhoan':
-             include "home.php";
-            break;
+        case 'updatedm':
+            if(isset($_POST['capnhat']) &&($_POST['capnhat']) ){
+                $tendanhmuc = $_POST['tenloai'];
+                $id = $_POST['id'];
+                update_danhmuc($id,$tendanhmuc);
+                $thongbao = "UPDATE thành công";
+            }   
+            $sql = "SELECT * FROM danhmuc order by id desc";
+            $listdanhmuc = loadall_danhmuc();
+            include "danhmuc/list.php";
+        case 'deletedm':
+            if(isset($_GET['id']) && ($_GET['id'] >0)){
+                delete_danhmuc($_GET['id']);
 
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "danhmuc/list.php";   
+        case 'addsp':
+            
+            break;
     }
  }
  include "footer.php";
- ?>

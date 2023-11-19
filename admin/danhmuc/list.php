@@ -1,35 +1,40 @@
-<div class="">
-    <div class="">
-        <h1>DANH SÁCH DANH MỤC</h1>
-    </div>
 
-
-    <div class=" ">
-        <form action="index.php?act=listdm" method="POST">
-            <div class="">
-                <table >
-                    <tr>
-                        <th></th>
-                        <th>ID</th>
-                        <th>TÊN LOẠI</th>
-                        
-                        <th>TÁC VỤ</th>
-                    </tr>
-
-                    <td><input type="checkbox" name="" id=""></td>
-                        <td>1</td>
-                        <td>TÓC</td>
-                        
-                        <td><button><a href="#">xóa</a></button> <button><a href="#">sửa</a></button></td>
-                        </tr>
-
-
-                </table>
-            </div>
-            <div class="btn">
-            
-            <a href="./index.php?act=adddm"> <input class="" type="button" value="NHẬP THÊM"></a>
+<?php
+// include "../header.php";
+// include "../footer.php";
+?>
+<div class="form-container">
+    <h2>Add Category</h2>
+    <div class="contents">
+        <div class="content">
+            <table class="danhmuc">
+                <tr>
+                    
+                    <th>Mã loại</th>
+                    <th>Tên loại</th>
+                    <th>Tùy chỉnh</th>
+                </tr>
+                <?php
+                foreach ($listdanhmuc as $danhmuc) {
+                    extract($danhmuc);
+                    $suadm = "index.php?act=suadm&id=" . $id;
+                    $xoadm = "index.php?act=deletedm&id=" . $id;
+                    echo ' <tr>
+                            
+                            
+                            <td>'.$id.'</td>
+                            <td>'.$name.'</td>
+                            <td><a href ="' . $suadm . '"> <input type="button" value="Sửa"></a> 
+                            <a href ="' . $xoadm . '"> <input type="button" value="Xóa"></a></td>
+                            
+                        </tr>';
+                }
+                
+                ?>
+            </table>
         </div>
-        </form>
+        <!-- <input type="submit" class="submit" value="THÊM MỚI DANH MỤC"> -->
+        <a href="index.php?act=adddm"  ><input type="button" class="submit" value="THÊM MỚI DANH MỤC"></a>
+
     </div>
 </div>
