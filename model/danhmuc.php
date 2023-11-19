@@ -15,3 +15,12 @@ function loadone_danhmuc($id)
     $dm = pdo_query_one($sql);
     return $dm;
 }
+function update_danhmuc($id, $tendanhmuc)
+{
+    $sql = "UPDATE danhmuc SET name='" . $tendanhmuc . "' WHERE id=" . $id;
+    pdo_execute($sql);
+}
+function delete_danhmuc($id){
+    $sql = "DELETE FROM danhmuc where id=" .$id;
+    pdo_execute($sql);
+}

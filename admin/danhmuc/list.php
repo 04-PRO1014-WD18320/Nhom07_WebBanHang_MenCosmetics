@@ -17,20 +17,22 @@
                 foreach ($listdanhmuc as $danhmuc) {
                     extract($danhmuc);
                     $suadm = "index.php?act=suadm&id=" . $id;
-                    // $xoadm = "index.php?act=xoadm&id=" . $id;
+                    $xoadm = "index.php?act=deletedm&id=" . $id;
                     echo ' <tr>
                             
                             
                             <td>'.$id.'</td>
                             <td>'.$name.'</td>
-                            <td><a href ="' . $suadm . '"> <input type="button" value="Sửa">
-                            </td>
+                            <td><a href ="' . $suadm . '"> <input type="button" value="Sửa"></a> 
+                            <a href ="' . $xoadm . '"> <input type="button" value="Xóa"></a></td>
+                            
                         </tr>';
                 }
-                // </a> <a href ="' . $xoadm . '"> <input type="button" value="Xóa"></a></td>
+                
                 ?>
             </table>
         </div>
-        <input type="submit" class="submit" value="THÊM MỚI DANH MỤC">
+        <!-- <input type="submit" class="submit" value="THÊM MỚI DANH MỤC"> -->
+        <a href="index.php?act=adddm"  ><input type="button" class="submit" value="THÊM MỚI DANH MỤC"></a>
     </div>
 </div>

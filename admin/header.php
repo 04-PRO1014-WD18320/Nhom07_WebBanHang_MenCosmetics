@@ -22,7 +22,7 @@
         >
           <a href="#">Sản phẩm </a>
           <div class="sub-menu">
-            <a href="#" class="sub-iatem">Danh sách</a>
+            <a href="#" class="sub-item">Danh sách</a>
             <a href="#" class="sub-item">Thêm</a>
           </div>
         </div>

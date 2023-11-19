@@ -34,9 +34,12 @@ input {
 }
 .submit{
     margin-top: 20px;
+    /* width: 70px;
+    height: 30px;
+    border: 1px solid gray; */
 }
-table .danhmuc {
- /* width: 100%; */
+table  {
+ width: 100%;
 }
 /* CSS cho ô header (th) */
 .danhmuc th {
@@ -54,17 +57,3 @@ table .danhmuc {
     border: 1px solid #ddd;
 }
 
-/* CSS cho nút sửa */
-.danhmuc .edit-button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.danhmuc .edit-button:hover {
-    background-color: #45a049;
-}
