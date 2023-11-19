@@ -15,11 +15,48 @@
             include "danhmuc/add.php";
             break;
 
+        case 'updatedm':
+            include "danhmuc/update.php";
+            break;
+
+
+
+
+
+
+
+
+
+
         case 'addsp':
             include "sanpham/add.php";
             break;
+        case 'editsp':
+            include "sanpham/edit.php";
+            break;
         case 'home':
             include "home.php";
+            break;
+        case 'listsp':
+            include "sanpham/list.php";
+            break;
+        case 'listdm':
+            include "danhmuc/list.php";
+            break;
+
+
+
+        case 'binhluan':
+             include "home.php";
+            break;
+        case 'donhang':
+             include "home.php";
+            break;
+        case 'thongke':
+             include "home.php";
+            break;
+        case 'taikhoan':
+             include "home.php";
             break;
 
     }

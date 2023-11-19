@@ -1,0 +1,133 @@
+main {
+    display: flex;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+main .container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+main .container .pro{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+    padding: 20px 0px;
+}
+
+
+main .container .pro img{
+    width: 300px;
+}
+
+main .container .pro .detail{
+    width: 50%;
+    margin-left: 100px;
+}
+
+main .container .pro .detail h5{
+    font-size: 26px;
+}
+
+main .container .pro .detail .price{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    margin: 50px 0;
+}
+
+main .container .pro .detail .quality{
+    display: flex;
+}
+
+main .container .pro .detail .quality input{
+    max-width: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+main .container .pro .detail .action input{
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+
+main .container .description{
+    padding: 20px;
+}
+
+main .container .description h5{
+    font-size: 26px;
+}
+
+main .container .description img{
+    width: 100px;
+    margin: 10px 0px;
+}
+
+main .container .description p{
+    margin: 10px;
+}
+
+main .container .comment {
+    border: 1px solid #000;
+    padding: 10px;
+    padding-top: 30px;
+    /* position: relative; */
+    margin-bottom: 50px;
+}
+
+main .container .comment h5{
+    padding: 0 10px;
+    font-size: 26px;
+    line-height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+
+main .container .comment table {
+    width: 100%;
+}
+
+main .container .comment table td,
+main .container .comment table th{
+    width: calc(100%/3);
+    text-align: center;
+}
+
+main .container .comment table th{
+    padding: 10px;
+}
+
+main .container .comment table td{
+    padding: 10px;
+    border-top: 1px solid #000;
+}
+
+main .container .samePro {
+    border: 1px solid #000;
+    padding: 10px;
+    padding-top: 30px;
+    /* position: relative; */
+    margin-bottom: 50px;
+}
+
+main .container .samePro h5{
+    padding: 0 10px;
+    font-size: 26px;
+    line-height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+
+main .container .samePro section{
+    display: flex;
+    justify-content: space-around;
+}
