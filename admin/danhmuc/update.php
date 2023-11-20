@@ -5,7 +5,7 @@ if (array($dm)) {
 }
 ?>
 <div class="form-container">
-    <h2>UpdateCategory</h2>
+    <h2>Chỉnh sửa danh mục</h2>
     <form action="index.php?act=updatedm" method="post">
         <label for="">ID:</label>
         <input type="text" name="maloai" placeholder="ID tự động tăng" disabled>
@@ -16,14 +16,17 @@ if (array($dm)) {
         <div class="btn">
             <input type="reset" value="RESET">
             <input type="submit" name="capnhat" value="UPDATE DANH MỤC">
-
+            <a href="index.php?act=listsp"><input type="" value="DANH SÁCH DANH MỤC"></a>
           
 
         </div>
+        <div class="thongbao">
         <?php
+        
         if (isset($thongbao) && ($thongbao != "")) {
             echo $thongbao;
         }
         ?>
+        </div>
     </form>
 </div>
