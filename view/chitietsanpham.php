@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản phẩm chi tiết</title>
-    <link rel="stylesheet" href="css/Ctsp.css">
-    <link rel="stylesheet" href="css/css.css">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-</head>
-<body>
-    <!-- begin header -->
-    <header>
-        <div class="logo">
-            <a href="#"><img src="img/logo.png" alt=""></a>
-        </div>
-        
-        <div class="search">
-            <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search">
-            <button class="button">SEARCH</button>
-        </div>
-        <div class="login">
-            <a href="#"><img src="img/user.png" alt="" class="btn-button"></a>
-        </div>
-        <div class="giohang">
-            <a href="#"><img src="img/cart.png" alt="" class="btn-button"></a>
-        </div>
-        
-        </nav>
-    </header>
-    
-    
-    <div class="placeholder"></div>
-    <nav class="menu">
-        <ul>
-            <li><a href="#">TRANG CHỦ</a></li>
-            <li><a href="#">TÓC</a></li>
-            <li><a href="#">DA MẶT</a></li>
-            <li><a href="#">SẢN PHẨM KHÁC</a></li>
-            
-        </ul>
-    </nav>
-    <!-- end header -->
-    <main>
+<main class="main-ctsp">
         <div class="container">
             <div class="pro">
                 <img src="./img/sap1.jpg" alt="">
@@ -125,14 +81,3 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p>Copyright © Classic Store</p>
-        <p>
-        GPĐK HKD: 41O8047539 do UBND Quận Bình Thạnh cấp ngày 27 tháng 04 năm 2023
-        </p>
-    </footer>
-
-
-</body>
-
-</html>
