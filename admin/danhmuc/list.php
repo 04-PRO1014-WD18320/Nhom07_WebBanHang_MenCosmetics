@@ -4,7 +4,7 @@
 // include "../footer.php";
 ?>
 <div class="form-container">
-    <h2>Add Category</h2>
+    <h2>danh sách danh mục</h2>
     <div class="contents">
         <div class="content">
             <table class="danhmuc">
