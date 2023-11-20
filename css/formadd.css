@@ -9,7 +9,7 @@
    
 }
 h2 {
-  text-align: center;
+  /* text-align: center; */
   color: #333;
 }
 
@@ -56,4 +56,18 @@ table  {
     text-align: center;
     border: 1px solid #ddd;
 }
-
+.form-locsp{
+  /* display: flex; */
+  flex-direction: initial;
+  /* align-items: center; */
+  justify-content: center;
+  
+}
+.form-locsp select{
+  height: 35px;
+  margin: 0px 20px
+  
+}
+.thongbao{
+  color: green;
+}
