@@ -43,7 +43,7 @@ header {
 .menu{
     /* position: fixed; */
     width: 100%;
-    
+    margin-bottom: 10px;
     height: 40px;
     background-color: #00472C;
     align-items: center;
@@ -150,6 +150,24 @@ nav ul li a:hover{
 .product-description {
     margin: 10px 0;
     font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-description:hover{
+    color: #F09116;
+}
+
+.product-description-div{
+    height: 60px;
+}
+
+.product-price-div{
+    height: 20px;
+}
+
+.product-img-div{
+    height: 300px;
 }
 
 .product-price {
@@ -158,12 +176,19 @@ nav ul li a:hover{
 
 .add-to-cart {
     background-color: #F09116;
+    align-items: first baseline;
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px 5px;
+    width: 150px;
     border: none;
     cursor: pointer;
+    
     transition: background-color 0.3s;
     border-radius: 5px;
+}
+
+del{
+    color: grey;
 }
 
 .add-to-cart:hover {
