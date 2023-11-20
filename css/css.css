@@ -25,8 +25,10 @@ header {
     /* border-bottom: 2px solid #2980b9; Thêm viền dưới */
 }
 .placeholder {
-    height: 100px; /* Đặt chiều cao tương đương với thanh header */
+    height: 100px; 
 }
+
+
 
 .logo {
     width: 100px;
@@ -69,7 +71,7 @@ nav ul li a:hover{
     margin-left: 20px;
 }
 
-.search input {
+.search .ip-search {
     padding: 5px;
     border: 1px solid gray;
     border-radius: 15px;
@@ -105,19 +107,10 @@ nav ul li a:hover{
     /* display: flex; */
     /* text-align: center; */
     border-radius: 3px;
-    align-items: center; /* Căn giữa biểu tượng và văn bản trong nút */
+    align-items: center; 
 }
 
-/* .btn-button:hover {
-    background-color: #0093ad;
-} */
 
-/* .login-button::before {
-    content: "\f090"; 
-    font-family: 'Font Awesome 5 Free'; 
-    margin-right: 5px;
-    
-} */
 .banner {
     text-align: center;
     margin: 10px;

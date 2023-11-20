@@ -19,17 +19,17 @@
     <div class="menu-item">
       <div class="item"><a href="index.php?act=home">Trang chủ Admin</a></div>
       <div class="item" onmouseover="toggleSubMenu(this)" onmouseout="toggleSubMenu(this)">
-        <a href="#">Sản phẩm </a>
+        <a href="index.php?act=listsp">Sản phẩm </a>
         <div class="sub-menu">
 
-          <a href="#" class="sub-item">Danh sách</a>
-          <a href="#" class="sub-item">Thêm</a>
+          <a href="index.php?act=listsp" class="sub-item">Danh sách sản phẩm</a>
+          <a href="index.php?act=addsp" class="sub-item">Thêm sản phẩm</a>
 
         </div>
       </div>
 
       <div class="item" onmouseover="toggleSubMenu(this)" onmouseout="toggleSubMenu(this)">
-        <a href="#">Danh mục</a>
+        <a href="index.php?act=listdm">Danh mục</a>
         <div class="sub-menu">
           <a href="index.php?act=listdm" class="sub-item">Danh mục sách danh mục</a>
           <a href="index.php?act=adddm" class="sub-item">Thêm danh mục </a>
