@@ -51,21 +51,25 @@ main .container .pro .detail .quality input{
 main .container .pro .detail .action input{
     padding: 10px;
     cursor: pointer;
-    margin: 0 20px;
+    background-color: #F09116 ;
+    width: 30%;
+    border: 1px solid gray;
 }
 
+main .container .pro .detail .action input:hover{
+    background-color: aqua;
+}
 
 main .container .description{
-    padding: 20px;
+    padding: 20px 0px;
 }
 
-main .container .description h5{
-    font-size: 26px;
-}
+
 
 main .container .description img{
     width: 100px;
     margin: 10px 0px;
+    margin-left: 10px;
 }
 
 main .container .description p{
@@ -97,7 +101,7 @@ main .container .comment table {
 main .container .comment table td,
 main .container .comment table th{
     width: calc(100%/3);
-    text-align: center;
+    text-align: start;
 }
 
 main .container .comment table th{

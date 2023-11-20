@@ -1,0 +1,15 @@
+.danhmuc{
+    border: 1px solid #000;
+    padding: 10px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    
+}
+
+.h2{
+    background-color: rgb(184, 184, 184);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
