@@ -40,6 +40,9 @@
       <div class="item"><a href="">Tài khoản</a></div>
       <div class="item"><a href="">Đơn hàng</a></div>
       <div class="item"><a href="">Thống kê</a></div>
+      <div class="item"><a href="../index.php?act=home">Website</a></div>
+      
+      
     </div>
   </nav>
 
