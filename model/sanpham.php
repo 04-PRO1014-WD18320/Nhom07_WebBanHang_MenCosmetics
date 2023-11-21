@@ -51,3 +51,9 @@ function loadall_sanpham_home(){
     $listsanpham = pdo_query($sql);
     return  $listsanpham;
 }
+function load_sanpham_cungloai($id, $iddm)
+{
+    $sql = "SELECT *FROM sanpham WHERE iddm=" . $iddm . " AND id <>" . $id;
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
