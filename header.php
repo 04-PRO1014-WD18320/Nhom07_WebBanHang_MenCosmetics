@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ</title>
+    <title>DỰ ÁN 1</title>
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/dmsp.css">
     <link rel="stylesheet" href="css/Ctsp.css">
     <link rel="stylesheet" href="css/giohang.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/thanhtoan.css">
+    <link rel="stylesheet" href="css/slideshow.css">
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
@@ -42,7 +43,7 @@
             <li><a href="#">TRANG CHỦ</a></li>
             <li><a href="#">TÓC</a></li>
             <li><a href="#">DA MẶT</a></li>
-            <li><a href="#">SẢN PHẨM KHÁC</a></li>
+            <li><a href="#">CƠ THỂ</a></li>
             
         </ul>
     </nav>

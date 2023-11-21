@@ -1,10 +1,19 @@
 <?php 
+include "model/pdo.php";
+include "model/sanpham.php";
+include "global.php";
+include "model/danhmuc.php";
     include "header.php";
 
+    $spnew = loadall_sanpham_home();
+    $dsdm = loadall_danhmuc();
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
+        
         switch($act){
             case 'home':
+
+
                 include "trangchu.php";
                 break;
             case 'dangnhap':
