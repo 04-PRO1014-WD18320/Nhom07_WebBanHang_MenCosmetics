@@ -1,11 +1,15 @@
 <main class="main-ctsp">
         <div class="container">
+        <?php 
+                extract($onesp);
+                $hinh = $img_path.$hinh;
+           echo'
             <div class="pro">
-                <img src="./img/sap1.jpg" alt="">
+                <img src="'.$hinh.'" alt="">
                 <div class="detail">
                     <div class="name">
-                        <h5>SÁP VUỐT TÓC</h5>
-                        <div class="price">500.000 VNĐ</div>
+                        <h5>'.$name.'</h5>
+                        <div class="price">'.$price.' VNĐ</div>
                         <div class="quality">
                             <p>Số lượng</p>
                             <input type="number" name="" value="1" min="1"></div>
@@ -15,19 +19,26 @@
                         </div>
                     </div>
                 </div>
-            </div>
-    
+            </div>';
+            ?>
+           
             <div class="description">
                 <h2>Mô Tả</h2>
-                <p>Giới thiệu sản phẩm</p>
-                <img src="./img/sap1.jpg">
-                <p>Thông tin chi tiết</p>
-                <p>Hướng dẫn sử dụng</p>
+                <p><?php echo nl2br($mota); ?></p>
+                
+                
             </div>
+            
+             
+            
+            
+                
+                
+            
 
             <h2>Bình luận</h2>
             
-            <div class="comment">
+             <div class="comment">
                 
                 <table>
                     <tr>
@@ -53,31 +64,30 @@
             <div class="samePro">
                 
                 <section class="products">
-                    <div class="product">
-                        <img src="img/sap1.jpg" alt="Product 1">
-                        <p class="product-description">Product Description</p>
-                        <p class="product-price">$99.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="img/sap1.jpg" alt="Product 1">
-                        <p class="product-description">Product Description</p>
-                        <p class="product-price">$99.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="img/sap1.jpg" alt="Product 1">
-                        <p class="product-description">Product Description</p>
-                        <p class="product-price">$99.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="img/sap1.jpg" alt="Product 1">
-                        <p class="product-description">Product Description</p>
-                        <p class="product-price">$99.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </section>
+                    <?php 
+                        
+                        // // echo $sp_cungloai;
+                        // echo '<pre>';
+                        // print_r($sp_cungloai);
+                        // echo '</pre>';
+                        // die();
+                        foreach($sp_cungloai as $spcl){
+                            extract($spcl);
+                            $hinh = $img_path.$hinh;
+                        echo' 
+                            <div class="product">
+                                <img src="'.$hinh.'" alt="Product 1">
+                                <p class="product-description">'.$name.'</p>
+                                <p class="product-price">'.$price.'</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            
+                        ';
+                        }
+                    ?>
+                    </section>
             </div>
         </div>
+    </div>
+
     </main>
