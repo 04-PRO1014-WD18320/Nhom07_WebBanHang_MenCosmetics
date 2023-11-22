@@ -41,9 +41,10 @@
     <nav class="menu">
         <ul>
             <li><a href="index.php?act=home">TRANG CHỦ</a></li>
-            <li><a href="#">TÓC</a></li>
-            <li><a href="#">DA MẶT</a></li>
-            <li><a href="#">CƠ THỂ</a></li>
+            <li><a href="index.php?act=sanpham&iddm=4">TÓC</a></li>
+            <li><a href="index.php?act=sanpham&iddm=5">DA MẶT</a></li>
+            <li><a href="index.php?act=sanpham&iddm=6">CƠ THỂ</a></li>
+            
             
         </ul>
     </nav>

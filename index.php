@@ -6,6 +6,7 @@ include "model/danhmuc.php";
     include "view/header.php";
 
     $spnew = loadall_sanpham_home();
+    $spgoiy = loadall_sanpham_goiy();
     $dsdm = loadall_danhmuc();
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
@@ -16,6 +17,25 @@ include "model/danhmuc.php";
 
                 include "view/trangchu.php";
                 break;
+
+            case "sanpham":
+                if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                    $kyw = $_POST['kyw'];
+                }else{
+                    $kyw="";
+                }
+                if(isset($_GET['iddm'])&&$_GET['iddm']>0){
+                    $iddm= $_GET['iddm'];
+                    
+                }else{
+                    $iddm = 0;
+                }
+                $dssp = loadall_sanpham($kyw,$iddm);
+                // $tendm= load_tendm($iddm);
+                include "view/sanpham.php";
+                
+                break;
+
             case 'dangnhap':
                 include "view/dangnhap.php";
                 break;
@@ -33,6 +53,24 @@ include "model/danhmuc.php";
                 } else {
                     // include "view/home.php";
                 }
+                break;
+
+                case 'muangay':
+                    if(isset($_POST['muangay'])&&($_POST['muangay'])){
+                        $id = $_POST['id'];
+                        $name = $_POST['name'];
+                        $img = $_POST['img'];
+                        $price = $_POST['price'];
+                        $soluong = 1;
+                        $ttien= $soluong * (int)$price;
+                        $sptt = [$id, $name, $img, $price, $soluong,$ttien];
+                        // array_push($_SESSION['mycart'], $spadd);
+                    }
+                        include "view/thanhtoan.php";
+                        break;
+               
+            case 'dathangthanhcong':
+                include "view/dathangthanhcong.php";
                 break;
                 
             case 'doimk':
