@@ -9,6 +9,7 @@ include "model/taikhoan.php";
 
 
     $spnew = loadall_sanpham_home();
+    $spgoiy = loadall_sanpham_goiy();
     $dsdm = loadall_danhmuc();
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
@@ -19,6 +20,25 @@ include "model/taikhoan.php";
 
                 include "view/trangchu.php";
                 break;
+
+            case "sanpham":
+                if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                    $kyw = $_POST['kyw'];
+                }else{
+                    $kyw="";
+                }
+                if(isset($_GET['iddm'])&&$_GET['iddm']>0){
+                    $iddm= $_GET['iddm'];
+                    
+                }else{
+                    $iddm = 0;
+                }
+                $dssp = loadall_sanpham($kyw,$iddm);
+                // $tendm= load_tendm($iddm);
+                include "view/sanpham.php";
+                
+                break;
+
             case 'dangnhap':
                 if(isset($_POST['dangnhap'])&&($_POST['dangnhap'])){
                     $user = $_POST['user'];
@@ -60,6 +80,7 @@ include "model/taikhoan.php";
     
                 }
                 include "view/dangki.php";
+
                 break;
 
             case "doimk";
@@ -96,6 +117,28 @@ include "model/taikhoan.php";
                 include "view/thanhtoan.php";
                 break;
             
+            hoangkhanhduy
+
+                case 'muangay':
+                    if(isset($_POST['muangay'])&&($_POST['muangay'])){
+                        $id = $_POST['id'];
+                        $name = $_POST['name'];
+                        $img = $_POST['img'];
+                        $price = $_POST['price'];
+                        $soluong = 1;
+                        $ttien= $soluong * (int)$price;
+                        $sptt = [$id, $name, $img, $price, $soluong,$ttien];
+                        // array_push($_SESSION['mycart'], $spadd);
+                    }
+                        include "view/thanhtoan.php";
+                        break;
+               
+            case 'dathangthanhcong':
+                include "view/dathangthanhcong.php";
+                break;
+                
+            case 'doimk':
+                include "view/doimk.php";
         }
     }
     
