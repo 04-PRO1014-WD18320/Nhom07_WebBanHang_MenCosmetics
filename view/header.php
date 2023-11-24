@@ -27,7 +27,7 @@
             <button class="button">SEARCH</button>
         </div>
         <div class="login">
-            <a href="#"><img src="img/user.png" alt="" class="btn-button"></a>
+            <a href="index.php?act=qlnguoidung"><img src="img/user.png" alt="" class="btn-button"></a>
         </div>
         <div class="giohang">
             <a href="#"><img src="img/cart.png" alt="" class="btn-button"></a>
