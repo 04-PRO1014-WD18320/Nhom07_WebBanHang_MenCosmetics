@@ -1,20 +1,24 @@
 <!-- begin main -->
 <main>
-            <h1 class="h1">ĐỔI MẬT KHẨU</h1>
+            <h1 class="h1">QUÊN MẬT KHẨU</h1>
             <div class="form-dn">
-                <form action="/action_page.php" method="post">
+                <form action="index.php?act=doimk" method="post">
                 <div class="container">
-                    <label for="uname"><b>MẬT KHẨU MỚI</b></label>
-                    <input type="password" placeholder="Nhập mật khẩu mới" name="uname" required class="ip-text">
+                    <label for="uname"><b>Email</b></label>
+                    <input type="email" placeholder="Nhập email của bạn" name="email" required class="ip-text">
                 
-                    <label for="psw"><b>NHẬP LẠI MẬT KHẨU MỚI</b></label>
-                    <input type="password" placeholder="Nhập lại mật khẩu mới" name="psw" required class="ip-text">
+                   <?php 
+                   if(isset($thongbao_email)&&($thongbao_email!="")){
+                    echo $thongbao_email;
+                }
+                   ?>
 
                     <!-- <label for="psw"><b> XÁC NHẬN EMAIL</b></label>
                     <input type="email" placeholder="Nhập email" name="psw" required class="ip-text"> -->
 
                     <div class="btn-dn"> 
                         
+                        <input name="guiemail"  type="submit" value="GỬI"><br>
                     </div> 
                 </div>
                 

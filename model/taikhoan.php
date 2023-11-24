@@ -11,4 +11,11 @@
         $sp = pdo_query_one($sql);
         return  $sp;
     }
+
+    function check_email($email){
+        $sql = "select *  from nguoidung where email='".$email."'";
+        $sp = pdo_query_one($sql);
+        return  $sp;
+    }
+
 ?>

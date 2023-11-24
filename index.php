@@ -61,6 +61,25 @@ include "model/taikhoan.php";
                 }
                 include "view/dangki.php";
                 break;
+
+            case "doimk";
+                if(isset($_POST['guiemail'])&&($_POST['guiemail'])){                      
+                    $email = $_POST['email'];
+                    $checkemail = check_email($email);
+                    if(is_array($checkemail)){
+                        $thongbao_email="Mật khẩu của bạn là: ".$checkemail['pass'];
+                    }else{
+                        $thongbao_email = "Email này không tồn tại!";
+                    }
+                }
+                    include "view/doimk.php";
+                    break;
+
+            case "thoat";
+                session_unset();
+                header('Location: index.php?act=home'); 
+                break;
+
             case 'giohang':
                 include "view/giohang.php";
                 break;
@@ -70,8 +89,9 @@ include "model/taikhoan.php";
             case 'xnemail':
                 include "view/xnemail.php";
                 break;
-            case 'doimk':
-                include "view/doimk.php";
+            // case 'doimk':
+            //     include "view/doimk.php"; 
+            //     break;
             case 'thanhtoan':
                 include "view/thanhtoan.php";
                 break;

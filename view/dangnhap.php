@@ -14,14 +14,23 @@
                         <label>
                         <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
                         </label>
+                        Chưa có tài khoản? <a href="index.php?act=dangki">Đăng kí ngay</a>
                     </div> 
                 </div>
                 
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" class="cancelbtn"><a href="index.php?act=qlnguoidung">Cancel</a></button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <span class="psw">Forgot <a href="index.php?act=doimk">password?</a></span>
                   </div>
                 </form>
+                <h6 style="color: red;">
+                <?php
+            
+            if(isset($thongbao)&&($thongbao!="")){
+                echo $thongbao;
+            }
+        ?>
+              </h6>
 
             </div>
 
