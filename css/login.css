@@ -18,10 +18,14 @@ input[type=text], input[type=password] ,input[type=email] {
   text-align: center;
 }
 
+.btn-dn a{
+  font-size: x-small;
+}
+
 .btn-dn input[type=checkbox]{
   align-items: start;
 }
-button {
+.btn-dn input[type=submit],button {
   background-color: #F09116;
   color: white;
   padding: 14px 20px;
@@ -32,8 +36,8 @@ button {
   
 }
 
-button:hover {
-  background-color: aqua;
+.btn-dn input[type=submit],button:hover{
+  background-color: #c47713;
 }
 
 .cancelbtn {
