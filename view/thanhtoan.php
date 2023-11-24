@@ -20,41 +20,42 @@
 
         <div class="tt-donhang">
             <h2>Đơn Hàng Của Bạn</h2>
-            
-            <div class="box-sp-donhang">
-                <img src="./img/sap1.jpg" alt="">
-                <div class="tt-sp-donhang">
-                    <p><strong>Tên sản phẩm</strong></p>
-                    <p>Giá: 500.000VNĐ</p>
-                    <p>Số lượng: x2</p>
-                </div>
-            </div>
+            <?php 
+                extract($sptt);
+                // $hinh = $img_path.$hinh;
 
+            echo '
             <div class="box-sp-donhang">
-                <img src="./img/sap1.jpg" alt="">
+                <img src="'.$img.'" alt="">
                 <div class="tt-sp-donhang">
-                    <p><strong>Tên sản phẩm</strong></p>
-                    <p>Giá: 500.000VNĐ</p>
-                    <p>Số lượng: x2</p>
+                    <p><strong>'.$name.'</strong></p>
+                    <p>Giá: '.$price.'VNĐ</p>
+                    <p>Số lượng: '.$soluong.'</p>
                 </div>
-            </div>
+            </div>'
+            ?>
 
+           
+<?php
+        $phivc = 20000;
+
+            echo'
             <div class="tamtinh">
-                Tạm tính: <strong>1.000.000Đ</strong>
-                
-            </div>
+                Tạm tính: <strong>'.$ttien.'Đ</strong>
+            </div>';
+            ?>
             <hr>
 
             <div class="vanchuyen">
                 <h4>Giao Hàng</h4>
                 <p>Phí vận chuyển: 20.000Đ</p>
-                <div class="tong"><strong>Tổng: 1.020.000Đ</strong></div>
+                <div class="tong"><strong>Tổng: <?php echo $phivc + $ttien; ?>Đ</strong></div>
             </div>
             <hr>
             <div class="ht-thanhtoan">
-                <input type="radio" name="httt" id="" checked> Thanh toán bằng tiền mặt <br>
-                <input type="radio" name="httt" id=""> Thanh toán chuyển khoản <br>
-                <div class="btn-tt"><input type="submit" name="" id="" value="Thanh toán"></div>
+                <input type="radio" name="pttt" id="" checked> Thanh toán bằng tiền mặt <br>
+                <input type="radio" name="pttt" id=""> Thanh toán chuyển khoản <br>
+                <div class="btn-tt"><a href="index.php?act=dathangthanhcong"><input type="submit" name="dongydathang" id="" value="Thanh toán"></a></div>
             </div>
             
         </div>

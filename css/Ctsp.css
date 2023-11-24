@@ -49,6 +49,9 @@ main .container .pro .detail .quality input{
     margin-left: 20px;
     margin-bottom: 50px;
 }
+.form-hidden {
+    border: none;
+}
 
 main .container .pro .detail .action input{
     padding: 10px;
