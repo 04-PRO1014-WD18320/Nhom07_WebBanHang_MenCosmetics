@@ -27,7 +27,7 @@
             <button class="button">SEARCH</button>
         </div>
         <div class="login">
-            <a href="#"><img src="img/user.png" alt="" class="btn-button"></a>
+            <a href="index.php?act=qlnguoidung"><img src="img/user.png" alt="" class="btn-button"></a>
         </div>
         <div class="giohang">
             <a href="index.php?act=giohang"><img src="img/cart.png" alt="" class="btn-button"></a>
@@ -40,10 +40,13 @@
     <div class="placeholder"></div>
     <nav class="menu">
         <ul>
-            <li><a href="index.php">TRANG CHỦ</a></li>
-            <li><a href="#">TÓC</a></li>
-            <li><a href="#">DA MẶT</a></li>
-            <li><a href="#">CƠ THỂ</a></li>
+
+            <li><a href="index.php?act=home">TRANG CHỦ</a></li>
+            <li><a href="index.php?act=sanpham&iddm=4">TÓC</a></li>
+            <li><a href="index.php?act=sanpham&iddm=5">DA MẶT</a></li>
+            <li><a href="index.php?act=sanpham&iddm=6">CƠ THỂ</a></li>
+            
+
             
         </ul>
     </nav>
