@@ -1,3 +1,4 @@
+
 <?php 
 session_start();
 include "model/pdo.php";
@@ -5,7 +6,9 @@ include "model/sanpham.php";
 include "global.php";
 include "model/danhmuc.php";
 include "model/taikhoan.php";
-    include "view/header.php";
+include "view/header.php";
+include "view/header.php";
+
 
 
     $spnew = loadall_sanpham_home();
@@ -16,11 +19,23 @@ include "model/taikhoan.php";
         
         switch($act){
             case 'home':
+                 include "view/trangchu.php";
+            break;
 
-
+  
+        case 'sanphamct':
+            if (isset($_GET['idsp']) && ($_GET > 0)) {
+                $id = $_GET['idsp'];
+                $onesp = loadone_sanpham($id);
+                extract($onesp);
+                $sp_cungloai = load_sanpham_cungloai($id, $iddm);
+                // $binhluan = loadall_binhluan($_GET['idsp']);
+                include "view/chitietsanpham.php";
+            } else {
                 include "view/trangchu.php";
-                break;
-
+            }
+            break;
+            
             case "sanpham":
                 if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
                     $kyw = $_POST['kyw'];
@@ -56,18 +71,7 @@ include "model/taikhoan.php";
                 include "view/dangnhap.php";
                 break;
            
-            case 'sanphamct':
-                if (isset($_GET['idsp']) && ($_GET > 0)) {
-                    $id = $_GET['idsp'];
-                    $onesp = loadone_sanpham($id);
-                    extract($onesp);
-                    $sp_cungloai = load_sanpham_cungloai($id, $iddm);
-                    // $binhluan = loadall_binhluan($_GET['idsp']);
-                    include "view/chitietsanpham.php";
-                } else {
-                    // include "view/home.php";
-                }
-                break;
+           
             
             case 'dangki':
                 if(isset($_POST['dangki'])&&($_POST['dangki'])){
@@ -107,17 +111,10 @@ include "model/taikhoan.php";
             case 'qlnguoidung':
                 include "view/qlnguoidung.php";
                 break;
-            case 'xnemail':
-                include "view/xnemail.php";
-                break;
-            // case 'doimk':
-            //     include "view/doimk.php"; 
-            //     break;
+            
             case 'thanhtoan':
                 include "view/thanhtoan.php";
-                break;
-            
-            hoangkhanhduy
+                break;          
 
                 case 'muangay':
                     if(isset($_POST['muangay'])&&($_POST['muangay'])){
@@ -136,15 +133,20 @@ include "model/taikhoan.php";
             case 'dathangthanhcong':
                 include "view/dathangthanhcong.php";
                 break;
-                
-            case 'doimk':
-                include "view/doimk.php";
-        }
+            
+            default:           
+            include "view/trangchu.php";
+            break;
+            
+        
+
     }
-    
-    // include "trangchu.php";
+}else{
+    include "view/trangchu.php";
+}
+
+// include "trangchu.php";
 
 
-    include "view/footer.php";
-
+include "view/footer.php";
 ?>
