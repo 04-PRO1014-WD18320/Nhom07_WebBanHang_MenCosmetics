@@ -14,7 +14,6 @@
                     <input type="email" placeholder="Nhập email" name="psw" required class="ip-text"> -->
 
                     <div class="btn-dn"> 
-                        <button type="submit">Lưu Thay Đổi</button><br>
                         
                     </div> 
                 </div>
