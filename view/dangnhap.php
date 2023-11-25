@@ -2,7 +2,7 @@
 <main>
             <h1 class="h1">ĐĂNG NHẬP TÀI KHOẢN</h1>
             <div class="form-dn">
-                <form action="index.php?act=dangnhap" method="post">
+                <form action="index.php?act=dangnhap" method="post" class="form-dkidn">
                 <div class="container">
                     <label for="uname"><b>TÊN ĐĂNG NHẬP</b></label>
                     <input type="text" placeholder="Nhập tên đăng nhập" name="user" required class="ip-text">

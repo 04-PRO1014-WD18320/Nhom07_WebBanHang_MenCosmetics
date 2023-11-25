@@ -3,7 +3,7 @@
     margin-top: 10px;
 }
 
-form {border: 3px solid #f1f1f1;}
+.form-dkidn {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] ,input[type=email] {
   width: 100%;
