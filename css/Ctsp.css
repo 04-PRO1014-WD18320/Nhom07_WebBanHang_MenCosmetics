@@ -53,6 +53,15 @@ main .container .pro .detail .quality input{
     border: none;
 }
 
+.action{
+    display: flex;
+    
+}
+.form-muangay{
+    width: 100%;
+    margin-left: 20px;
+}
+
 main .container .pro .detail .action input{
     padding: 10px;
     cursor: pointer;
