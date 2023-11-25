@@ -15,6 +15,7 @@
                         <h5>' . $name . '</h5>
                         <div class="price">' . $price . ' VNĐ</div>
 
+
                             <div class="quality">
                                 <p>Số lượng</p>
                                 <input type="number" name="soluong" value="1" min="1">
@@ -37,9 +38,18 @@
             </div>
             ';
         ?>
-        
-        
 
+        <form method="post" action="index.php?act=themvaogiohang&idsp=<?=$id?>" >
+            <div class="quality">
+                <p>Số lượng</p>
+                <input type="number" name="soluong" value="1" min="1">
+            </div>
+            <input type="hidden" name="idsp" value="<?=$id?>">
+            <div class="action">
+                <input type="submit" name="themgiohang" value="Thêm Giỏ Hàng">
+                <a href="index.php?act=muangay"><input type="button" value="Mua Ngay"></a>
+            </div>
+        </form>
 
         <div class="description">
             <h2>Mô Tả</h2>
