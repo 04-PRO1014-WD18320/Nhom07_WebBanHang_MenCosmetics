@@ -9,7 +9,6 @@ include "model/taikhoan.php";
 include "model/giohang.php";
 include "view/header.php";
 
-// include "view/header.php";
 
 // if (isset($user['id'])) {
 //     $id = $user['id'];
@@ -136,7 +135,28 @@ if (isset($_GET['act'])) {
             }
 
 
-            break;
+
+            
+                   
+
+                case 'muangay':
+                    if(isset($_POST['muangay'])&&($_POST['muangay'])){
+                        $id = $_POST['id'];
+                        $name = $_POST['name'];
+                        $img = $_POST['hinh'];
+                        $price = $_POST['price'];
+                        $soluong = 1;
+                        $ttien= $soluong * (int)$price;
+                        $sptt = [$id, $name, $img, $price, $soluong,$ttien];
+                        // array_push($_SESSION['mycart'], $spadd);
+                    }
+                        include "view/thanhtoan.php";
+                        break;
+               
+            case 'dathangthanhcong':
+                include "view/dathangthanhcong.php";
+                break;
+            
         case 'qlnguoidung':
             include "view/qlnguoidung.php";
             break;
@@ -145,23 +165,9 @@ if (isset($_GET['act'])) {
             include "view/thanhtoan.php";
             break;
 
-        case 'muangay':
-            if (isset($_POST['muangay']) && ($_POST['muangay'])) {
-                $id = $_POST['id'];
-                $name = $_POST['name'];
-                $img = $_POST['img'];
-                $price = $_POST['price'];
-                $soluong = 1;
-                $ttien = $soluong * (int)$price;
-                $sptt = [$id, $name, $img, $price, $soluong, $ttien];
-                // array_push($_SESSION['mycart'], $spadd);
-            }
-            include "view/thanhtoan.php";
-            break;
+      
 
-        case 'dathangthanhcong':
-            include "view/dathangthanhcong.php";
-            break;
+
 
         default:
             // include "view/trangchu.php";

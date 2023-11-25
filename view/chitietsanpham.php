@@ -7,16 +7,38 @@
         extract($onesp);
         $hinh = $img_path . $hinh;
         echo '
+        
             <div class="pro">
                 <img src="' . $hinh . '" alt="">
                 <div class="detail">
                     <div class="name">
                         <h5>' . $name . '</h5>
                         <div class="price">' . $price . ' VNĐ</div>
+
+
+                            <div class="quality">
+                                <p>Số lượng</p>
+                                <input type="number" name="soluong" value="1" min="1">
+                            </div>
+                            <div class="action">
+                                    <input type="submit" value="Thêm Giỏ Hàng" name="addtocart">
+                                            
+                                    <form action="index.php?act=muangay" method="post" class="form-muangay">
+                                            <input type="hidden" name="id" value="'.$onesp['id'].'">
+                                            <input type="hidden" name="name" value="'.$onesp['name'].'">
+                                            <input type="hidden" name="price" value="'.$onesp['price'].'">
+                                            <input type="hidden" name="hinh" value="'.$hinh.'">
+                                
+                                        
+                                        <input type="submit" value="Mua Ngay" name="muangay">
+                                    </form>
+                            </div>                                             
                     </div>
                 </div>
-            </div>';
+            </div>
+            ';
         ?>
+
         <form method="post" action="index.php?act=themvaogiohang&idsp=<?=$id?>" >
             <div class="quality">
                 <p>Số lượng</p>
@@ -28,6 +50,7 @@
                 <a href="index.php?act=muangay"><input type="button" value="Mua Ngay"></a>
             </div>
         </form>
+
         <div class="description">
             <h2>Mô Tả</h2>
             <p><?php echo nl2br($mota); ?></p>
@@ -69,14 +92,15 @@
                 // die();
                 foreach ($sp_cungloai as $spcl) {
                     extract($spcl);
+                    $linksp = "index.php?act=sanphamct&idsp=" . $id;
                     $hinh = $img_path . $hinh;
                     echo ' 
-                            <div class="product">
-                                <img src="' . $hinh . '" alt="Product 1">
-                                <p class="product-description">' . $name . '</p>
-                                <p class="product-price">' . $price . '</p>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
+                    <div class="product">
+                    <div class="product-img-div"><a href="' . $linksp . '"><img src="' . $hinh . '" alt="Product 1"></a></div>
+                    <div class="product-description-div"><a class="product-description" href="' . $linksp . '">' . $name . '</a></div> <br>
+                    <div class="product-price-div"> <p class="product-price"><del>' . $price . 'đ </del>' . $newprice . 'đ</p> </div>
+                    <div><button class="add-to-cart">Thêm vào giỏ hàng</button></div>
+                </div>
                             
                         ';
                 }
