@@ -7,7 +7,7 @@ include "global.php";
 include "model/danhmuc.php";
 include "model/taikhoan.php";
 include "view/header.php";
-include "view/header.php";
+
 
 
 
@@ -120,7 +120,7 @@ include "view/header.php";
                     if(isset($_POST['muangay'])&&($_POST['muangay'])){
                         $id = $_POST['id'];
                         $name = $_POST['name'];
-                        $img = $_POST['img'];
+                        $img = $_POST['hinh'];
                         $price = $_POST['price'];
                         $soluong = 1;
                         $ttien= $soluong * (int)$price;
