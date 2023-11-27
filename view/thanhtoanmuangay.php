@@ -1,7 +1,7 @@
  <!-- begin main -->
  <div class="content-tt">
      <div class="tt-thanhtoan">
-         <form action="index.php?act=thanhtoan" method="post">
+         <form action="index.php?act=thanhtoanmuangay" method="post">
              <h2>Thông tin khách hàng</h2>
 
              <div class="ip-tt">
@@ -22,30 +22,31 @@
      <div class="tt-donhang">
          <h2>Đơn Hàng Của Bạn</h2>
          <?php
-         $i = 0;
-         $tongsl = 0;
+         
+         $soluong = 1;
          $tonggia= 0;
         
-             foreach($listsanpham as $sp){
+                
                 extract($sp);
-                $tongsl += $sp['soluong'];
-                $tonggia += $sp['soluong']* $sp['price'];
+                
+                $tonggia = $soluong* $price;
 
          ?>
+
             <div class="box-sp-donhang">
-                <img src="upload/<?=$sp['hinh']?>" alt="">
+                <img src="upload/<?=$hinh?>" alt="">
                 <div class="tt-sp-donhang">
-                    <p><strong><?= $sp['name']?></strong></p>
-                    <p>Giá:<?= number_format($sp['price']) ?> VNĐ</p>
-                    <p>Số lượng: <?=$sp['soluong']?></p>
-                    <p>Tổng: <?= number_format($sp['soluong']*$sp['price']) ?> VNĐ</p>
+                    <p><strong><?= $name?></strong></p>
+                    <p>Giá:<?= number_format($price) ?> VNĐ</p>
+                    <p>Số lượng: <?=$soluong?></p>
+                    <p>Tổng: <?= number_format($soluong*$price) ?> VNĐ</p>
                 </div> 
             </div>
 
     <?php 
-        $i++;
-    } 
-        ?>
+        
+    
+       ?>
 
          <?php
             $phivc = 20000;
@@ -66,7 +67,7 @@
          <div class="ht-thanhtoan">
              <input type="radio" name="pttt" id="" checked> Thanh toán bằng tiền mặt <br>
              <input type="radio" name="pttt" id=""> Thanh toán chuyển khoản <br>
-             <div class="btn-tt"><a href="index.php?act=dathangthanhcong"><input type="submit" name="dathang" id="" value="Thanh toán"></a></div>
+             <div class="btn-tt"><a href="index.php?act=dathangthanhcong"><input type="submit" name="dathangmuangay" id="" value="Thanh toán"></a></div>
          </div>
          </form>
      </div>

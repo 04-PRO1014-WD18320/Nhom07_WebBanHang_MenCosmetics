@@ -5,6 +5,12 @@
       </footer>
       
 </body>
-<script src="main.js"></script>
+<script src="main.js">
+    //   document.querySelector('a').addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     // Các hành động khác trong JavaScript
+    // });
+
+</script>
 </html>
 <!-- end footer -->
