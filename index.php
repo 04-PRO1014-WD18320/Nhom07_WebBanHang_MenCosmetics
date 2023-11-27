@@ -135,6 +135,13 @@ if (isset($_GET['act'])) {
                 header('Location: index.php?act=dangnhap');
             } break;
          
+          case 'xoagiohang':
+            if (isset($_GET['id_giohang']) && $_GET['id_giohang'] > 0) {
+                $id_giohang = $_GET['id_giohang'];
+                delete_giohang($_GET['id_giohang']);
+                header("location:index.php?act=giohang");
+            }
+            break;
 
         case 'thanhtoan':
             if (isset($_SESSION['user']['id'])){
@@ -246,6 +253,7 @@ if (isset($_GET['act'])) {
                 break;
 
            
+      
                     
         case 'dathangthanhcong':
             include "view/dathangthanhcong.php";

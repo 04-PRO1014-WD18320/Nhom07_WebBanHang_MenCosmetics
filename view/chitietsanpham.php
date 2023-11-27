@@ -27,16 +27,9 @@
                             <input type="submit" name="themgiohang" value="Thêm Giỏ Hàng">
                         </form>
 
-
-
-
                         <form action="index.php?act=muangay&idsp=<?=$id?>" method="post" class="form-muangay">
                         <input type="hidden" name="idsp" value="<?= $id ?>">
-                        
-                       
-                           
 
-                            
                          <input type="submit" name="thanhtoanmuangay" value="Mua Ngay">
 
                         </form>

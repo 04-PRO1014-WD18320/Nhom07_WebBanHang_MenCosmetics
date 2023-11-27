@@ -22,15 +22,10 @@ function loadall_giohang($id){
     $giohang = pdo_query($sql);
     return $giohang; 
 }
-function mua1_giohang($idtk,$id_giohang){
-    $sql = "select soluong, iduser, idsp, name, price, hinh,  from giohang 
-    join sanpham on sanpham.id = giohang.idsp,
-    join nguoidung on nguoidung.id = giohang.iduser
-    where idtk=$idtk and giohang.id=$id_giohang";
-    $giohang = pdo_query($sql);
-    return $giohang; 
+
+function delete_giohang($id){
+    $sql = "DELETE from giohang where id=".$id;
+    pdo_execute($sql);   
 }
-
-
 
 
