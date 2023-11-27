@@ -16,23 +16,7 @@
                         <div class="price">' . $price . ' VNĐ</div>
 
 
-                            <div class="quality">
-                                <p>Số lượng</p>
-                                <input type="number" name="soluong" value="1" min="1">
-                            </div>
-                            <div class="action">
-                                    <input type="submit" value="Thêm Giỏ Hàng" name="addtocart">
-                                            
-                                    <form action="index.php?act=muangay" method="post" class="form-muangay">
-                                            <input type="hidden" name="id" value="'.$onesp['id'].'">
-                                            <input type="hidden" name="name" value="'.$onesp['name'].'">
-                                            <input type="hidden" name="price" value="'.$onesp['price'].'">
-                                            <input type="hidden" name="hinh" value="'.$hinh.'">
-                                
-                                        
-                                        <input type="submit" value="Mua Ngay" name="muangay">
-                                    </form>
-                            </div>                                             
+                                                            
                     </div>
                 </div>
             </div>

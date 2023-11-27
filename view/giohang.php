@@ -4,7 +4,7 @@
 ?>
 <main>
   <!-- <h1 class="h1">GIỎ HÀNG CỦA BẠN</h1> -->
-  <form action="#">
+  <!-- <form action="#"> -->
     <table class="customers">
       <thead>
         <tr>
@@ -21,6 +21,9 @@
       <tbody>
       <?php 
               foreach($listgiohang as $giohang):
+                // var_dump($giohang);
+                // $id_giohang = isset($giohang['id']) ? $giohang['id'] : null;
+                // var_dump($id_giohang)  ;
                 extract($giohang);
                 // $thanhTien = $price * $soluong;
              ?>
@@ -31,8 +34,8 @@
           <td class="td-tt"><?=$price?></td>
           <td class="td-tt"><input type="number" min="1"  step="1" value="<?=$soluong?>"  /></td>
           
-          <!-- <td class="td-tt"><?=number_format($thanhTien)?>Đ</td> -->
-          <td><a href="#">Xóa</a></td>
+          <td><a href="index.php?act=xoagiohang&id_giohang=<?=$id?>" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này chứ ?')">Xóa</a></td>
+          
         </tr>
         <?php endforeach ?>
       </tbody>

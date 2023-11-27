@@ -126,7 +126,8 @@ nav ul li a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 20px;
+    margin: auto;
+    width: 1386px;
 }
 
 .product {
@@ -171,7 +172,7 @@ nav ul li a:hover{
 }
 
 .product-price {
-    color: #FF5733;
+    color: #F09116;
 }
 
 .add-to-cart {
@@ -192,7 +193,7 @@ del{
 }
 
 .add-to-cart:hover {
-    background-color: #FF5733;
+    background-color: #d38014;
 }
 
 /* css quanli nguoi dung */

@@ -9,6 +9,7 @@ include "model/taikhoan.php";
 include "model/giohang.php";
 include "view/header.php";
 
+// include "view/header.php";
 
 // if (isset($user['id'])) {
 //     $id = $user['id'];
@@ -133,30 +134,14 @@ if (isset($_GET['act'])) {
             } else {
                 header('Location: index.php?act=dangnhap');
             }
-
-
-
-            
-                   
-
-                case 'muangay':
-                    if(isset($_POST['muangay'])&&($_POST['muangay'])){
-                        $id = $_POST['id'];
-                        $name = $_POST['name'];
-                        $img = $_POST['hinh'];
-                        $price = $_POST['price'];
-                        $soluong = 1;
-                        $ttien= $soluong * (int)$price;
-                        $sptt = [$id, $name, $img, $price, $soluong,$ttien];
-                        // array_push($_SESSION['mycart'], $spadd);
-                    }
-                        include "view/thanhtoan.php";
-                        break;
-               
-            case 'dathangthanhcong':
-                include "view/dathangthanhcong.php";
-                break;
-            
+            break;
+        case 'xoagiohang':
+            if (isset($_GET['id_giohang']) && $_GET['id_giohang'] > 0) {
+                $id_giohang = $_GET['id_giohang'];
+                delete_giohang($_GET['id_giohang']);
+                header("location:index.php?act=giohang");
+            }
+            break;
         case 'qlnguoidung':
             include "view/qlnguoidung.php";
             break;
@@ -165,9 +150,23 @@ if (isset($_GET['act'])) {
             include "view/thanhtoan.php";
             break;
 
-      
+        case 'muangay':
+            if (isset($_POST['muangay']) && ($_POST['muangay'])) {
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                $img = $_POST['img'];
+                $price = $_POST['price'];
+                $soluong = 1;
+                $ttien = $soluong * (int)$price;
+                $sptt = [$id, $name, $img, $price, $soluong, $ttien];
+                // array_push($_SESSION['mycart'], $spadd);
+            }
+            include "view/thanhtoan.php";
+            break;
 
-
+        case 'dathangthanhcong':
+            include "view/dathangthanhcong.php";
+            break;
 
         default:
             // include "view/trangchu.php";
