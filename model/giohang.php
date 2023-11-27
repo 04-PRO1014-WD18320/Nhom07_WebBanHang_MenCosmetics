@@ -15,12 +15,22 @@ function update_giohang($soluong, $id) {
     pdo_execute($sql, $soluong, $id);
 }
 function loadall_giohang($id){
-    $sql = "SELECT giohang.soluong, sanpham.name,  sanpham.price, sanpham.hinh
+    $sql = "SELECT giohang.idsp, giohang.id, giohang.soluong, sanpham.name,  sanpham.price, sanpham.hinh
     FROM giohang
-    JOIN sanpham ON giohang.idsp = sanpham.id
+    JOIN sanpham ON sanpham.id = giohang.idsp
     WHERE giohang.iduser = $id";
     $giohang = pdo_query($sql);
     return $giohang; 
 }
+function mua1_giohang($idtk,$id_giohang){
+    $sql = "select soluong, iduser, idsp, name, price, hinh,  from giohang 
+    join sanpham on sanpham.id = giohang.idsp,
+    join nguoidung on nguoidung.id = giohang.iduser
+    where idtk=$idtk and giohang.id=$id_giohang";
+    $giohang = pdo_query($sql);
+    return $giohang; 
+}
+
+
 
 

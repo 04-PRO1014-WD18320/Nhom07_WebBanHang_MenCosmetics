@@ -6,7 +6,7 @@
             <div class="item2">
                 <?php 
                if( isset($_SESSION['user'])) {
-                 echo '<a href="index.php?act=doimk">Tài Khoản</a>';  
+                 echo '<a href="index.php?act=qltaikhoan">Tài Khoản</a>';  
                      }else{
                         echo '<a href="index.php?act=dangnhap">Tài Khoản</a>';
                      }
