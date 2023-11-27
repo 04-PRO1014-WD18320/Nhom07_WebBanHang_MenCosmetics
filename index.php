@@ -8,8 +8,7 @@ include "model/danhmuc.php";
 include "model/taikhoan.php";
 include "model/giohang.php";
 include "view/header.php";
-
-// include "view/header.php";
+include "model/donhang.php";
 
 // if (isset($user['id'])) {
 //     $id = $user['id'];
@@ -126,6 +125,7 @@ if (isset($_GET['act'])) {
                 header('Location: index.php?act=dangnhap');
             }
             break;
+
         case 'giohang':
             if (isset($_SESSION['user']['id'])) {
                 $userid = $_SESSION['user']['id'];
@@ -133,40 +133,147 @@ if (isset($_GET['act'])) {
                 include "view/giohang.php";
             } else {
                 header('Location: index.php?act=dangnhap');
-            }
-            break;
-        case 'xoagiohang':
+            } break;
+         
+          case 'xoagiohang':
             if (isset($_GET['id_giohang']) && $_GET['id_giohang'] > 0) {
                 $id_giohang = $_GET['id_giohang'];
                 delete_giohang($_GET['id_giohang']);
                 header("location:index.php?act=giohang");
             }
             break;
+
+        case 'thanhtoan':
+            if (isset($_SESSION['user']['id'])){
+                $userid = $_SESSION['user']['id'];
+            }
+                $tk = loadone_tk($userid);
+                $listsanpham =loadall_giohang($userid);
+        //    print_r($listsanpham);
+        //     // print_r($listsanpham['id']);
+        //     die();
+            $donhang_id = "";
+            if(isset($_POST['muatatca'])){
+                extract($listsanpham);
+                // // print_r($listsanpham);
+                // // die();
+                // // print_r($listsanpham);
+                // // die();
+                // $id= $listsanpham['idsp'];
+                // $name= $listsanpham['name'];
+                // // echo $name;
+                // // die();
+                // $price= $listsanpham['price'];
+                // $hinh= $listsanpham['hinh'];
+                // $soluong= $listsanpham['soluong'];
+            }
+            if(isset($_POST['dathang'])){
+                $idtk = $_POST['id'];
+                $tennguoinhan = $_POST['user'];
+                $emailnguoinhan = $_POST['email'];
+                $sdtnguoinhan = $_POST['tel'];
+                $diachinguoinhan = $_POST['diachi'];
+                $pttt = $_POST['pttt'];
+                $tongtien = $_POST['tongtien']; 
+                // $ttien = $_POST[''];
+                $ghichu = $_POST['ghichu'];
+                $donhang_id = insert_donhang($idtk, $tennguoinhan, $emailnguoinhan,
+                $sdtnguoinhan, $diachinguoinhan, $pttt, $tongtien, $ghichu);
+
+                // lấy id đơn hàng mới nhất
+
+                // $donhang_id =$checkid;
+                // echo "checkid=" . $donhang_id;
+                // $donhang = loadlast_donhang_id();
+                // print_r($listsanpham) ;
+                // die();
+                foreach($listsanpham as $sp){
+                    extract($sp);
+                        
+                    insert_donhangchitiet( $donhang_id,$idsp,$soluong, $price,$hinh, $name);
+                    //sau khi đặt hàng thành công thì xóa giỏ hàng
+                    // delete_giohang($id);
+                }   
+                header("location:index.php?act=dathangthanhcong");
+            } 
+             include "view/thanhtoan.php";
+             break;
+
+
+
+        case 'muangay':
+            if (isset($_POST['idsp']) && ($_POST > 0)) {
+                $id = $_POST['idsp'];
+                $sp = loadone_sanpham($id);   
+                extract($sp);
+                
+            }
+            // die();
+            if (isset($_SESSION['user']['id'])){
+                $userid = $_SESSION['user']['id'];
+                $tk = loadone_tk($userid);
+                $sp = loadone_sanpham($_POST['idsp']);
+                if(isset($_POST['thanhtoanmuangay'])&&($_POST['thanhtoanmuangay'])){
+                    extract($sp);
+                    
+                }
+                $donhang_id = "";
+                if(isset($_POST['dathangmuangay']) && ($_POST['dathangmuangay']) != ''){
+                    $idtk = $_POST['id'];
+                    $tennguoinhan = $_POST['user'];
+                    $emailnguoinhan = $_POST['email'];
+                    $sdtnguoinhan = $_POST['tel'];
+                    $diachinguoinhan = $_POST['diachi'];
+                    $pttt = $_POST['pttt'];
+                    $tongtien = $_POST['tongtien']; 
+                    $ghichu = $_POST['ghichu'];
+                    
+                    
+
+                    $donhang_id = insert_donhang($idtk, $tennguoinhan, $emailnguoinhan,
+                    $sdtnguoinhan, $diachinguoinhan, $pttt, $tongtien, $ghichu);
+    
+                    
+                    // print_r($donhang_id);
+                    $donhang_id = loadlast_donhang_id();
+                    print_r($sp);
+                    die();
+                    
+                        extract($sp);
+                            
+                        insert_donhangchitiet( $donhang_id,$idsp,$soluong, $price,$hinh, $name);
+                        //sau khi đặt hàng thành công thì xóa giỏ hàng
+                        // delete_giohang($id);
+                    
+                }
+        }else{
+            header('Location: index.php?act=dangnhap');
+        }
+                include "view/thanhtoanmuangay.php";
+                break;
+
+           
+      
+                    
+        case 'dathangthanhcong':
+            include "view/dathangthanhcong.php";
+            break;
+            
         case 'qlnguoidung':
             include "view/qlnguoidung.php";
+            break;
+
+        case 'qltaikhoan':
+            include "view/quanlitaikhoan.php";
             break;
 
         case 'thanhtoan':
             include "view/thanhtoan.php";
             break;
 
-        case 'muangay':
-            if (isset($_POST['muangay']) && ($_POST['muangay'])) {
-                $id = $_POST['id'];
-                $name = $_POST['name'];
-                $img = $_POST['img'];
-                $price = $_POST['price'];
-                $soluong = 1;
-                $ttien = $soluong * (int)$price;
-                $sptt = [$id, $name, $img, $price, $soluong, $ttien];
-                // array_push($_SESSION['mycart'], $spadd);
-            }
-            include "view/thanhtoan.php";
-            break;
+      
 
-        case 'dathangthanhcong':
-            include "view/dathangthanhcong.php";
-            break;
+
 
         default:
             // include "view/trangchu.php";

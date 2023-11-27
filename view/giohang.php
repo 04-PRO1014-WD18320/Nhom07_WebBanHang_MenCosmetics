@@ -4,7 +4,9 @@
 ?>
 <main>
   <!-- <h1 class="h1">GIỎ HÀNG CỦA BẠN</h1> -->
-  <!-- <form action="#"> -->
+
+ <form action="index.php?act=thanhtoan" method="post">
+
     <table class="customers">
       <thead>
         <tr>
@@ -25,43 +27,27 @@
                 // $id_giohang = isset($giohang['id']) ? $giohang['id'] : null;
                 // var_dump($id_giohang)  ;
                 extract($giohang);
-                // $thanhTien = $price * $soluong;
+                $thanhTien = $price * $soluong;
              ?>
         <tr>
-          <td><input type="checkbox" name="" id=""></td>
+          
           <td><img src="upload/<?=$hinh?>" alt=""></td>
           <td class="td-tt"><?=$name?> </td>
           <td class="td-tt"><?=$price?></td>
           <td class="td-tt"><input type="number" min="1"  step="1" value="<?=$soluong?>"  /></td>
           
           <td><a href="index.php?act=xoagiohang&id_giohang=<?=$id?>" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này chứ ?')">Xóa</a></td>
-          
         </tr>
         <?php endforeach ?>
       </tbody>
-      <!-- <tr>
-        <td><input type="checkbox" name="" id=""></td>
-        <td><img src="./img/sap1.jpg" alt=""></td>
-        <td class="td-tt">Sáp Vuốt Tóc </td>
-        <td class="td-tt">500.000Đ</td>
-        <td class="td-tt">1</td>
-        <td class="td-tt">500.000Đ</td>
-        <td><a href="#">Xóa</a></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" name="" id=""></td>
-        <td><img src="./img/sap1.jpg" alt=""></td>
-        <td class="td-tt">Sáp Vuốt Tóc </td>
-        <td class="td-tt">500.000Đ</td>
-        <td class="td-tt">1</td>
-        <td class="td-tt">500.000Đ</td>
-        <td><a href="#">Xóa</a></td>
-      </tr> -->
+      
     </table>
     <div class="btn-giohang">
-      <button>xóa tất cả</button> <button>Thanh toán</button>
+      <button>xóa tất cả</button> 
+      
+        <a href="index.php?act=thanhtoan"><button type="submit" name="muatatca">Thanh Toán</button></a>
     </div>
-  </form>
+    </form>
 </main>
 
 
