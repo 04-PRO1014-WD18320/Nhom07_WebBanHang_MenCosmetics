@@ -40,14 +40,19 @@ main .container .pro .detail .price{
     margin: 50px 0;
 }
 
-main .container .pro .detail .quality{
+ .pro .detail .quality{
     display: flex;
 }
 
-main .container .pro .detail .quality input{
-    max-width: 50px;
+ .pro .detail .quality .ip-soluong{
+    width: 60px;
     margin-left: 20px;
     margin-bottom: 50px;
+    background-color: #fff;
+  
+}
+.ip-themgiohang{
+    width: 170px;
 }
 .form-hidden {
     border: none;
@@ -57,20 +62,30 @@ main .container .pro .detail .quality input{
     display: flex;
     
 }
-.form-muangay{
-    width: 100%;
-    margin-left: 20px;
+.form-giohang input[type=submit]{
+    /* width: 100%; */
+    /* margin-left: 20px; */
+    margin-top: 30px;
 }
 
-main .container .pro .detail .action input{
+.form-giohang input[type=number]{
+    width: 100px;
+    margin-left: 5px;
+}
+.form-muangay{
+    margin-top: 49px;
+}
+
+
+main .container .pro .detail .action input[type=submit]{
     padding: 10px;
     cursor: pointer;
     background-color: #F09116 ;
-    width: 30%;
+    width: 150px;
     border: 1px solid ;
 }
 
-main .container .pro .detail .action input:hover{
+main .container .pro .detail .action input[type=submit]:hover{
     background-color: #c67b1a;
 }
 

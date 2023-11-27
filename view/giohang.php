@@ -4,7 +4,7 @@
 ?>
 <main>
   <!-- <h1 class="h1">GIỎ HÀNG CỦA BẠN</h1> -->
-  <form action="#">
+ <form action="index.php?act=thanhtoan" method="post">
     <table class="customers">
       <thead>
         <tr>
@@ -22,16 +22,16 @@
       <?php 
               foreach($listgiohang as $giohang):
                 extract($giohang);
-                // $thanhTien = $price * $soluong;
+                $thanhTien = $price * $soluong;
              ?>
         <tr>
-          <td><input type="checkbox" name="" id=""></td>
+          
           <td><img src="upload/<?=$hinh?>" alt=""></td>
           <td class="td-tt"><?=$name?> </td>
           <td class="td-tt"><?=$price?></td>
           <td class="td-tt"><input type="number" min="1"  step="1" value="<?=$soluong?>"  /></td>
           
-          <!-- <td class="td-tt"><?=number_format($thanhTien)?>Đ</td> -->
+          <td class="td-tt"><?=number_format($thanhTien)?>Đ</td>
           <td><a href="#">Xóa</a></td>
         </tr>
         <?php endforeach ?>
@@ -56,9 +56,11 @@
       </tr> -->
     </table>
     <div class="btn-giohang">
-      <button>xóa tất cả</button> <button>Thanh toán</button>
+      <button>xóa tất cả</button> 
+      
+        <a href="index.php?act=thanhtoan"><button type="submit" name="muatatca">Thanh Toán</button></a>
     </div>
-  </form>
+    </form>
 </main>
 
 

@@ -18,4 +18,10 @@
         return  $sp;
     }
 
+    function loadone_tk($id){
+        $sql = "SELECT *FROM nguoidung WHERE id=" . $id;
+        $tk = pdo_query_one($sql);
+        return $tk;
+    }
+
 ?>
