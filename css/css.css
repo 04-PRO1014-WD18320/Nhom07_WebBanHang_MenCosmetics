@@ -6,7 +6,8 @@
 
 body {
     /* background-color: aqua; */
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5F5F5;
 }
 
 header {
@@ -123,24 +124,28 @@ nav ul li a:hover{
 } */
 
 .products {
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: auto;
+    margin: 20px auto;
     width: 1386px;
+    background-color: #fff;
 }
 
 .product {
     background-color: #fff;
     padding: 20px;
     margin: 10px;
-    width: 23%; /* Để có 4 sản phẩm mỗi hàng, đặt width: 23%; */
+    width: 18%; /* Để có 4 sản phẩm mỗi hàng, đặt width: 23%; */
     text-align: center;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
 }
 .product:hover{
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(78, 91, 80, 0.4);
+    transition: background-color 0.5s;
 }
 
 .product img {
@@ -150,11 +155,16 @@ nav ul li a:hover{
 
 .product-description {
     margin: 10px 0;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-decoration: none;
     color: #000000;
 }
-
+.product-description p{
+    /* text-align: justify; */
+    /* text-align-last: left; */
+    font-size: 15px;
+    color: #5d5c5c;
+}
 .product-description:hover{
     color: #F09116;
 }
@@ -165,10 +175,11 @@ nav ul li a:hover{
 
 .product-price-div{
     height: 20px;
+    margin: 10px 0px;
 }
 
 .product-img-div{
-    height: 300px;
+    height: 230px;
 }
 
 .product-price {
@@ -176,12 +187,13 @@ nav ul li a:hover{
 }
 
 .add-to-cart {
-    background-color: #F09116;
+    background-color: #00472cdd;
     align-items: first baseline;
     color: #fff;
     padding: 10px 5px;
     width: 150px;
-    border: none;
+    /* border: 2px solid #00472c95; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     
     transition: background-color 0.3s;
@@ -193,7 +205,8 @@ del{
 }
 
 .add-to-cart:hover {
-    background-color: #d38014;
+    background-color: #00472c;
+    color: #fff;
 }
 
 /* css quanli nguoi dung */
@@ -234,12 +247,49 @@ del{
 
 
 /* css footer */
+.kele{
+    height: 5px;
+    background-color: #00472C;
+}
+.site-footers{
+   height: 300px;
+   display: flex;
+   margin: 0px 100px;
+}
+.site-footer{
+    width: 30%;
+    margin: 30px;
+}
 
-footer{
-    width: 100%;
-    height: 70px;
-    background-color: #4e4e4e;
+.site-footer h5{
+    margin-bottom: 40px;
+    color: #5d5c5c;
+}
+.site-footer p{
+    color: #5d5c5c;
+    font-size: 14px;
+}
+.site-footer li{
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.site-footer a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #5d5c5c;
+}
+.site-footer img{
+    width: 20px;
+    height: 20px;
+    
+}
+.footer-content{
     text-align: center;
-    padding: 25px;
-    color: #fff;
+   margin: 0px 200px;
+   color: #5d5c5c;
+   font-size: 14px;
+}
+.footer-content p{
+    margin: 20px;
 }

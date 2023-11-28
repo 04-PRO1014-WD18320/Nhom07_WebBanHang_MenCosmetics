@@ -12,29 +12,40 @@
             <img src="<?= $hinh ?>" alt="">
             <div class="detail">
                 <div class="name">
-                    <h5><?= $name ?></h5>
-                    <div class="price"><?= $price ?> VNĐ</div>
+                    <p><?= $name ?></p>
+                </div>
+                <div class="gia">
+                    <div class="price"><?= $newprice ?>₫</div>
+                    <p>-</p>
+                    <div class="oldprice"><del><?= $price ?></del>₫</div>
+
+                </div>
+                <div class="nguongoc">
+                    <div class="conlai">Xuất xứ:<?= $xuatxu ?> </div>
+                    <div class="conlai"><?= $soluong ?> sản phẩm có sẵn </div>
+                </div>
 
 
-                    <div class="action">
 
-                        <form method="post" action="index.php?act=themvaogiohang&idsp=<?= $id ?>" class="form-giohang">
-                            <div class="quality">
-                                <p>Số lượng</p>
-                                <input type="number" name="soluong" value="1" min="1">
-                            </div>
-                            <input type="hidden" name="idsp" value="<?= $id ?>">
-                            <input type="submit" name="themgiohang" value="Thêm Giỏ Hàng">
-                        </form>
+                <div class="action">
 
-                        <form action="index.php?act=muangay&idsp=<?=$id?>" method="post" class="form-muangay">
+                    <form method="post" action="index.php?act=themvaogiohang&idsp=<?= $id ?>" class="form-giohang">
+                        <div class="quality">
+                            <p>Số lượng</p>
+                            <input type="number" name="soluong" value="1" min="1">
+                        </div>
+                        <input type="hidden" name="idsp" value="<?= $id ?>">
+                        <input type="submit" name="themgiohang" value="Thêm Vào Giỏ Hàng">
+                    </form>
+
+                    <form action="index.php?act=muangay&idsp=<?= $id ?>" method="post" class="form-muangay">
                         <input type="hidden" name="idsp" value="<?= $id ?>">
 
-                         <input type="submit" name="thanhtoanmuangay" value="Mua Ngay">
+                        <input type="submit" name="thanhtoanmuangay" value="Mua Ngay">
 
-                        </form>
-                    </div>
+                    </form>
                 </div>
+
             </div>
         </div>
 
@@ -45,10 +56,10 @@
             <h2>Mô Tả</h2>
             <p><?php echo nl2br($mota); ?></p>
         </div>
-        <h2>Bình luận</h2>
+
 
         <div class="comment">
-
+            <h2>Bình luận</h2>
             <table>
                 <tr>
                     <th>Tài Khoản</th>
@@ -72,7 +83,7 @@
         <h2>Sản Phẩm Tương Tự</h2>
         <div class="samePro">
 
-            <section class="products">
+            <section class="productss">
                 <?php
 
                 // // echo $sp_cungloai;

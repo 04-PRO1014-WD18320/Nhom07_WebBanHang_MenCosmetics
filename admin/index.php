@@ -50,6 +50,8 @@ if (isset($_GET['act'])) {
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
                 $giamoi = $_POST['giamoi'];
+                $xuatxu = $_POST['xuatxu'];
+                $soluong = $_POST['soluong'];
                 $mota = $_POST['mota'];
                 $hinh = $_FILES['hinh']['name'];
                 $target_dir = "../upload/";
@@ -57,7 +59,7 @@ if (isset($_GET['act'])) {
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
                 } else {
                 }
-                insert_sanpham($tensp, $mota, $giasp,$giamoi, $hinh, $iddm);
+                insert_sanpham($tensp, $mota, $giasp,$giamoi, $hinh,$xuatxu,$soluong, $iddm);
                 $thongbao = 'THÊM THÀNH CÔNG';
             }
             $listdanhmuc = loadall_danhmuc();
@@ -89,6 +91,8 @@ if (isset($_GET['act'])) {
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
                 $giamoi = $_POST['giamoi'];
+                $xuatxu = $_POST['xuatxu'];
+                $soluong = $_POST['soluong'];
                 $mota = $_POST['mota'];
                 $hinh = $_FILES['hinh']['name'];
                 echo $hinh;
@@ -97,7 +101,7 @@ if (isset($_GET['act'])) {
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
                 } else {
                 }
-                update_sanpham($id, $iddm, $tensp, $giasp,$giamoi, $mota, $hinh);
+                update_sanpham($id, $iddm, $tensp, $giasp,$giamoi, $mota, $hinh,$xuatxu,$soluong);
                 $thongbao = 'CẬP NHẬT THÀNH CÔNG';
                 // include "sanpham/edit.php";
             }

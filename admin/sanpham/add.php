@@ -26,6 +26,12 @@
         <label for="">Giá Mới:</label>
         <input type="text" name="giamoi" placeholder="Nhập giá mới sản phẩm..." required>
 
+        <label for="">Xuất xứ:</label>
+        <input type="text" name="xuatxu" placeholder="Nhập giá xuất xứ sản phẩm..." required>
+
+        <label for="">Số lượng:</label>
+        <input type="text" name="soluong" placeholder="Nhập giá số lượng sản phẩm..." required>
+
         <label for="">Hình Ảnh:</label>
         <input type="file" name="hinh"  required>
 

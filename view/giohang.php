@@ -6,11 +6,10 @@
   <!-- <h1 class="h1">GIỎ HÀNG CỦA BẠN</h1> -->
 
  <form action="index.php?act=thanhtoan" method="post">
-
+  <h5>Giỏ Hàng</h5>
     <table class="customers">
       <thead>
         <tr>
-         
           <th>Hình ảnh</th>
           <th>Tên sản phẩm</th>
           <th>Giá</th>
