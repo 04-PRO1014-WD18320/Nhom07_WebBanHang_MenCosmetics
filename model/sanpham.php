@@ -1,7 +1,7 @@
 <?php
-function insert_sanpham($tensp, $mota, $giasp,$giamoi, $hinh, $iddm)
+function insert_sanpham($tensp, $mota, $giasp,$giamoi, $hinh,$xuatxu,$soluong, $iddm)
 {
-    $sql = "INSERT INTO sanpham(name,mota,price,newprice,hinh,iddm) VALUES ('$tensp','$mota','$giasp','$giamoi','$hinh','$iddm')";
+    $sql = "INSERT INTO sanpham(name,mota,price,newprice,hinh,xuatxu,soluong,iddm) VALUES ('$tensp','$mota','$giasp','$giamoi','$hinh','$xuatxu','$soluong','$iddm')";
     pdo_execute($sql);
 }
 function loadall_sanpham($kyw = "", $iddm = 0)
@@ -24,13 +24,13 @@ function loadall_sanpham($kyw = "", $iddm = 0)
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
-function  update_sanpham($id, $iddm, $tensp, $giasp,$giamoi, $mota, $hinh)
+function  update_sanpham($id, $iddm, $tensp, $giasp,$giamoi, $mota, $hinh,$xuatxu,$soluong)
 {
     if ($hinh != "") {
 
-        $sql = "UPDATE sanpham SET iddm='" . $iddm . "' ,name='" . $tensp . "',price='" . $giasp . "',newprice='".$giamoi."', mota='" . $mota . "',hinh='" . $hinh . "' WHERE id=" . $id;
+        $sql = "UPDATE sanpham SET iddm='" . $iddm . "' ,name='" . $tensp . "',price='" . $giasp . "',newprice='".$giamoi."', mota='" . $mota . "',hinh='" . $hinh . "' ,xuatxu='".$xuatxu."',soluong='".$soluong."' WHERE id=" . $id;
     } else {
-        $sql = "UPDATE sanpham SET iddm='" . $iddm . "' ,name='" . $tensp . "',price='" . $giasp . "',newprice='".$giamoi."',mota='" . $mota . "' WHERE id=" . $id;
+        $sql = "UPDATE sanpham SET iddm='" . $iddm . "' ,name='" . $tensp . "',price='" . $giasp . "',newprice='".$giamoi."',mota='" . $mota . "', xuatxu='".$xuatxu."',soluong='".$soluong."' WHERE id=" . $id;
     }
     pdo_execute($sql);
 }
@@ -47,7 +47,7 @@ function delete_sanpham($id)
 }
 
 function loadall_sanpham_home(){
-    $sql = "select * from sanpham where 1 order by id desc limit 0,12 ";    
+    $sql = "select * from sanpham where 1 order by id desc  ";    
     $listsanpham = pdo_query($sql);
     return  $listsanpham;
 }

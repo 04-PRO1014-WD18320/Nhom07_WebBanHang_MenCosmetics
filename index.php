@@ -192,7 +192,7 @@ if (isset($_GET['act'])) {
                         
                     insert_donhangchitiet( $donhang_id,$idsp,$soluong, $price,$hinh, $name);
                     //sau khi đặt hàng thành công thì xóa giỏ hàng
-                    // delete_giohang($id);
+                    delete_giohang($id);
                 }   
                 header("location:index.php?act=dathangthanhcong");
             } 
