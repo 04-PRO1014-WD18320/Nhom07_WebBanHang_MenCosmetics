@@ -38,6 +38,11 @@ $mota_ban_dau = $mota;
         <label for="">Giá mới:</label>
         <input type="text" name="giamoi" value="<?=$newprice?>" >
 
+        <label for="">Xuất xứ:</label>
+        <input type="text" name="xuatxu" value="<?=$xuatxu?>" >
+
+        <label for="">Số lượng:</label>
+        <input type="text" name="soluong" value="<?=$soluong?>">
         <label for="">Hình Ảnh: </label>
         <input type="file" name="hinh"  value="<?= $hinh ?>">
 
