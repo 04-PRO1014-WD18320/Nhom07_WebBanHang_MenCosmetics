@@ -146,9 +146,10 @@ if (isset($_GET['act'])) {
         case 'thanhtoan':
             if (isset($_SESSION['user']['id'])){
                 $userid = $_SESSION['user']['id'];
+                
             }
                 $tk = loadone_tk($userid);
-                $listsanpham =loadall_giohang($userid);
+                $listsanpham = loadall_giohang($userid);
         //    print_r($listsanpham);
         //     // print_r($listsanpham['id']);
         //     die();
@@ -205,14 +206,13 @@ if (isset($_GET['act'])) {
             if (isset($_POST['idsp']) && ($_POST > 0)) {
                 $id = $_POST['idsp'];
                 $sp = loadone_sanpham($id);   
-                extract($sp);
-                
+                // extract($sp);
             }
             // die();
             if (isset($_SESSION['user']['id'])){
                 $userid = $_SESSION['user']['id'];
                 $tk = loadone_tk($userid);
-                $sp = loadone_sanpham($_POST['idsp']);
+                
                 if(isset($_POST['thanhtoanmuangay'])&&($_POST['thanhtoanmuangay'])){
                     extract($sp);
                     
@@ -228,24 +228,15 @@ if (isset($_GET['act'])) {
                     $tongtien = $_POST['tongtien']; 
                     $ghichu = $_POST['ghichu'];
                     
-                    
-
                     $donhang_id = insert_donhang($idtk, $tennguoinhan, $emailnguoinhan,
                     $sdtnguoinhan, $diachinguoinhan, $pttt, $tongtien, $ghichu);
-    
-                    
-                    // print_r($donhang_id);
-                    $donhang_id = loadlast_donhang_id();
-                    print_r($sp);
-                    die();
-                    
-                        extract($sp);
-                            
-                        insert_donhangchitiet( $donhang_id,$idsp,$soluong, $price,$hinh, $name);
-                        //sau khi đặt hàng thành công thì xóa giỏ hàng
-                        // delete_giohang($id);
-                    
+
+                    extract($sp);
+                    insert_donhangchitiet($donhang_id, $id, 1, $newprice, $hinh, $name);
+       
                 }
+                
+
         }else{
             header('Location: index.php?act=dangnhap');
         }

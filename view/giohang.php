@@ -10,7 +10,6 @@
     <table class="customers">
       <thead>
         <tr>
-          
           <th>Hình ảnh</th>
           <th>Tên sản phẩm</th>
           <th>Giá</th>
