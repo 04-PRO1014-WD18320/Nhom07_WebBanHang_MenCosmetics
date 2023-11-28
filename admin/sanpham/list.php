@@ -27,6 +27,8 @@
                     <th>Hình ảnh</th>
                     <th>Giá cũ</th>
                     <th>Giá mới</th>
+                    <th>Xuất xứ</th>
+                    <th>Số lượng</th>
                     <th>Danh mục</th>
                     <th>Tùy chỉnh</th>
                 </tr>
@@ -48,6 +50,8 @@
                             <td>'.$hinh.'</td>
                             <td>'.$price.'</td>
                             <td>'.$newprice.'</td>
+                            <td>'.$xuatxu.'</td>
+                            <td>'.$soluong.'</td>
                             <td>'.$danhmuc_name.'</td>
                             <td><a href ="' . $suasp . '"> <input type="button" value="Sửa"></a> 
                             <a href ="' . $xoasp . '"> <input type="button" value="Xóa"></a>
