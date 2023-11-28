@@ -1,7 +1,7 @@
  <!-- begin main -->
  <div class="content-tt">
      <div class="tt-thanhtoan">
-         <form action="index.php?act=thanhtoanmuangay" method="post">
+         <form action="index.php?act=muangay" method="post">
              <h2>Thông tin khách hàng</h2>
 
              <div class="ip-tt">
