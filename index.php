@@ -109,7 +109,6 @@ if (isset($_GET['act'])) {
             $idsp = isset($_GET['idsp']) ? $_GET['idsp'] : null;
             if (isset($_SESSION['user']['id'])) {
                 $userid = $_SESSION['user']['id'];
-
                 if (isset($_POST['themgiohang'])) {
                     $check = check_giohang($idsp, $userid);
                     $soluong = isset($_POST['soluong']) ? intval($_POST['soluong']) : 1;
@@ -119,7 +118,7 @@ if (isset($_GET['act'])) {
                     } else {
                         insert_giohang($soluong, $userid, $idsp);
                     }
-                    header("Location:index.php?act=sanphamct&idsp=$idsp");
+                    // header("Location:index.php?act=sanphamct&idsp=$idsp");
                 }
             } else {
                 header('Location: index.php?act=dangnhap');
@@ -206,8 +205,9 @@ if (isset($_GET['act'])) {
             if (isset($_POST['idsp']) && ($_POST > 0)) {
                 $id = $_POST['idsp'];
                 $sp = loadone_sanpham($id);   
-                // extract($sp);
-            }
+                extract($sp);
+               
+            
             // die();
             if (isset($_SESSION['user']['id'])){
                 $userid = $_SESSION['user']['id'];
@@ -232,14 +232,17 @@ if (isset($_GET['act'])) {
                     $sdtnguoinhan, $diachinguoinhan, $pttt, $tongtien, $ghichu);
 
                     extract($sp);
+                    print_r($sp);
+                    die();
                     insert_donhangchitiet($donhang_id, $id, 1, $newprice, $hinh, $name);
        
                 }
-                
-
+                            
+            }
         }else{
             header('Location: index.php?act=dangnhap');
         }
+
                 include "view/thanhtoanmuangay.php";
                 break;
 
