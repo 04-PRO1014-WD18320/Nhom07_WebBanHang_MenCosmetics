@@ -109,7 +109,6 @@ if (isset($_GET['act'])) {
             $idsp = isset($_GET['idsp']) ? $_GET['idsp'] : null;
             if (isset($_SESSION['user']['id'])) {
                 $userid = $_SESSION['user']['id'];
-
                 if (isset($_POST['themgiohang'])) {
                     $check = check_giohang($idsp, $userid);
                     $soluong = isset($_POST['soluong']) ? intval($_POST['soluong']) : 1;
@@ -119,7 +118,7 @@ if (isset($_GET['act'])) {
                     } else {
                         insert_giohang($soluong, $userid, $idsp);
                     }
-                    header("Location:index.php?act=sanphamct&idsp=$idsp");
+                    // header("Location:index.php?act=sanphamct&idsp=$idsp");
                 }
             } else {
                 header('Location: index.php?act=dangnhap');
@@ -195,6 +194,7 @@ if (isset($_GET['act'])) {
 
 
         case 'muangay':
+
             if (isset($_SESSION['user']['id'])) {
                 $userid = $_SESSION['user']['id'];
                     $tk = loadone_tk($userid);
@@ -246,14 +246,7 @@ if (isset($_GET['act'])) {
                 header('Location: index.php?act=dangnhap');
             }
                 include "view/thanhtoanmuangay.php";
-                break;
-
-        
-        
-            
-
-
-
+                break;  
 
         case 'dathangthanhcong':
             include "view/dathangthanhcong.php";
