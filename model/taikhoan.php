@@ -24,4 +24,9 @@
         return $tk;
     }
 
+    function update_tk($id,$user,$pass,$email, $address,$tel)  {
+       $sql =" UPDATE nguoidung SET user='$user',pass='$pass',email='$email',address='$address',tel='$tel' WHERE id=" .$id;
+       pdo_execute($sql);
+    }
+
 ?>

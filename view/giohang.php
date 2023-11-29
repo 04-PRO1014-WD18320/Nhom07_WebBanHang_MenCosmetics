@@ -42,7 +42,7 @@
       
     </table>
     <div class="btn-giohang">
-      <button>xóa tất cả</button> 
+      <button type="submit" name="xoagiohang"><a href="index.php?act=xoagiohang">xóa tất cả</a></button> 
       
         <a href="index.php?act=thanhtoan"><button type="submit" name="muatatca">Thanh Toán</button></a>
     </div>

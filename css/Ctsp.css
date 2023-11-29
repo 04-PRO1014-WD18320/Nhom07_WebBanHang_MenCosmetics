@@ -30,7 +30,7 @@ main .container .pro {
   box-shadow: 0 0 10px rgba(58, 58, 58, 0.1);
 }
 .name p {
-  font-size: 20px;
+  font-size: 30px;
 }
 .gia {
   display: flex;
@@ -63,7 +63,9 @@ main .container .pro .detail h5 {
 
 .pro .detail .quality {
   display: flex;
-  padding: 0px 160px 63px 0px;
+  /* padding: 0px 160px 63px 0px; */
+  padding-bottom: 20px;
+  
 }
 .quality p {
   color: #888;
@@ -93,26 +95,36 @@ main .container .pro .detail h5 {
   align-items: flex-end;
 }
 
+
+
 .form-giohang,
 .form-muangay {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  width: auto;
+  
+
+}
+.form-muangay{
+  margin-left: 10px;
 }
 main .container .pro .detail .action input[type="submit"] {
   padding: 20px;
-  margin-right: 86px;
+  /* margin-right: 86px; */
   cursor: pointer;
   background-color: #00472ce7;
-  /* width: 150px; */
+  width: 200px;
   border: none;
-  width: auto;
+  /* width: auto; */
   color: #fff;
   border:2px solid #00472c;
   /* height: 50px; */
   text-transform: uppercase;
   border-radius: 3px;
   transition: background-color 0.3s;
+
+  
 }
 
 main .container .pro .detail .action input[type="submit"]:hover {
