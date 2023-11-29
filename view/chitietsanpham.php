@@ -18,7 +18,6 @@
                     <div class="price"><?= $newprice ?>₫</div>
                     <p>-</p>
                     <div class="oldprice"><del><?= $price ?></del>₫</div>
-
                 </div>
                 <div class="nguongoc">
                     <div class="conlai">Xuất xứ:<?= $xuatxu ?> </div>
@@ -29,7 +28,7 @@
 
                 <div class="action">
 
-                    <form method="post" action="index.php?act=themvaogiohang&idsp=<?= $id ?>" class="form-giohang">
+                    <form method="post" action="index.php?act=themvaogiohang&idsp=<?= $id ?>" class="form-giohang" onsubmit="submitForm(event)">
                         <div class="quality">
                             <p>Số lượng</p>
                             <input type="number" name="soluong" value="1" min="1">
