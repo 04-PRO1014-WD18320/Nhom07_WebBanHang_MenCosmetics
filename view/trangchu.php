@@ -73,57 +73,13 @@
         echo '<div class="product">
                 <div class="product-img-div"><a href="' . $linksp . '"><img src="' . $hinh . '" alt="Product 1"></a></div>
                 <div class="product-description-div"><a class="product-description" href="' . $linksp . '"><p>' . $name . '</p></a></div> <br>
-                <div class="product-price-div"> <p class="product-price">' . $newprice . '₫     <del>' . $price . '₫ </del></p>  </div>
+                <div class="product-price-div"> <p class="product-price">' . number_format($newprice)  . '₫     <del>' . number_format($price)  . '₫ </del></p>  </div>
                 <div><a href="index.php?act=themvaogiohang&idsp=" '.$id.'><button name="themgiohang" class="add-to-cart">Thêm vào giỏ hàng</button></a></div>
             </div>';
     }
 
     ?>
 
-    <!-- <div class="product">
-            <img src="img/sap1.jpg" alt="Product 1">
-            <p class="product-description">Product Description</p>
-            <p class="product-price">$99.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="img/sap1.jpg" alt="Product 1">
-            <p class="product-description">Product Description</p>
-            <p class="product-price">$99.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="img/sap1.jpg" alt="Product 1">
-            <p class="product-description">Product Description</p>
-            <p class="product-price">$99.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="img/sap1.jpg" alt="Product 1">
-            <p class="product-description">Product Description</p>
-            <p class="product-price">$99.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="img/sap1.jpg" alt="Product 1">
-            <p class="product-description">Product Description</p>
-            <p class="product-price">$99.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="img/sap1.jpg" alt="Product 1">
-            <p class="product-description">Product Description</p>
-            <p class="product-price">$99.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="img/sap1.jpg" alt="Product 1">
-            <p class="product-description">Product Description</p>
-            <p class="product-price">$99.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div> -->
-
-    <!-- Add more product elements here -->
 </section>
 
 <div class="h2">
@@ -145,8 +101,7 @@
         </div>
     ';
         $i++;
-        // print_r($img);
-        // }
+        
     }
     ?>
     

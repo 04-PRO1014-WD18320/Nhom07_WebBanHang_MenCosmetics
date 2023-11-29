@@ -15,9 +15,9 @@
                     <p><?= $name ?></p>
                 </div>
                 <div class="gia">
-                    <div class="price"><?= $newprice ?>₫</div>
+                    <div class="price"><?= number_format($newprice)  ?>₫</div>
                     <p>-</p>
-                    <div class="oldprice"><del><?= $price ?></del>₫</div>
+                    <div class="oldprice"><del><?= number_format($price) ?></del>₫</div>
 
                 </div>
                 <div class="nguongoc">
@@ -40,7 +40,7 @@
 
                     <form action="index.php?act=muangay&idsp=<?= $id ?>" method="post" class="form-muangay">
                         <input type="hidden" name="idsp" value="<?= $id ?>">
-
+                     
                         <input type="submit" name="thanhtoanmuangay" value="Mua Ngay">
 
                     </form>
@@ -99,7 +99,7 @@
                     <div class="product">
                     <div class="product-img-div"><a href="' . $linksp . '"><img src="' . $hinh . '" alt="Product 1"></a></div>
                     <div class="product-description-div"><a class="product-description" href="' . $linksp . '">' . $name . '</a></div> <br>
-                    <div class="product-price-div"> <p class="product-price"><del>' . $price . 'đ </del>' . $newprice . 'đ</p> </div>
+                    <div class="product-price-div"> <p class="product-price"><del>' . number_format($price) . 'đ </del>' . number_format($newprice) . 'đ</p> </div>
                     <div><button class="add-to-cart">Thêm vào giỏ hàng</button></div>
                 </div>
                             

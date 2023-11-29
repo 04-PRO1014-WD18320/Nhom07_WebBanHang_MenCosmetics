@@ -11,7 +11,7 @@
                  <input type="text" name="email" id="" value="<?= $email ?>">
 
                  <input type="text" name="diachi" id="" value="<?= $address ?>" placeholder="Nhập địa chỉ">
-                 <input type="text" name="tel" id="" placeholder="nhập số điện thoại">
+                 <input type="text" name="tel" id="" placeholder="nhập số điện thoại" value="<?= $tel ?>">
              </div>
              <label for="" class="lb-tt">Ghi chú đơn hàng</label>
              <textarea name="ghichu" id="" cols="82%" rows="10"></textarea>
@@ -22,54 +22,62 @@
      <div class="tt-donhang">
          <h2>Đơn Hàng Của Bạn</h2>
          <?php
-         
-         $soluong = 1;
-         $tonggia= 0;
-        
-                
-                extract($sp);
-                
-                $tonggia = $soluong* $price;
 
-         ?>
+            
+            $tonggia = 0;
 
-            <div class="box-sp-donhang">
-                <img src="upload/<?=$hinh?>" alt="">
-                <div class="tt-sp-donhang">
-                    <p><strong><?= $name?></strong></p>
-                    <p>Giá:<?= number_format($price) ?> VNĐ</p>
-                    <p>Số lượng: <?=$soluong?></p>
-                    <p>Tổng: <?= number_format($soluong*$price) ?> VNĐ</p>
-                </div> 
-            </div>
 
-    <?php 
-        
-    
-       ?>
+            extract($sp);
+
+            $tonggia = $soluong * $price;
+            $soluong = 1;
+            ?>
+         <input type="hidden" name="idsp" value="<?= $id ?>">
+
+         <div class="box-sp-donhang">
+             <img src="upload/<?= $hinh ?>" alt="">
+             <div class="tt-sp-donhang">
+                 <p><strong><?= $name ?></strong></p>
+                 <p>Giá:<?= number_format($price) ?> VNĐ</p>
+                 <p>Số lượng: <?= $soluong ?></p>
+                 <p>Tổng: <?= number_format($soluong * $price) ?> VNĐ</p>
+             </div>
+         </div>
+
+         <?php
+
+
+            ?>
 
          <?php
             $phivc = 20000;
             echo '
             <div class="tamtinh">
-                Tạm tính: <strong>' . number_format($tonggia) . 'Đ</strong>
+                Tạm tính: <strong>' . number_format($price) . 'Đ</strong>
             </div>';
-        ?>
+            ?>
          <hr>
 
          <div class="vanchuyen">
-             <h4>Giao Hàng</h4> 
+             <h4>Giao Hàng</h4>
              <p>Phí vận chuyển: 20.000Đ</p>
-             <div class="tong"><strong >Tổng: <?php echo number_format($phivc + $tonggia) ?>Đ</strong></div>
-             <input type="hidden" name="tongtien" value="<?=$phivc + $tonggia?>">
+             <div class="tong"><strong>Tổng: <?php echo number_format($phivc + $price) ?>Đ</strong></div>
+             <input type="hidden" name="tongtien" value="<?= $phivc + $price ?>">
          </div>
          <hr>
          <div class="ht-thanhtoan">
-             <input type="radio" name="pttt" id="" checked> Thanh toán bằng tiền mặt <br>
-             <input type="radio" name="pttt" id=""> Thanh toán chuyển khoản <br>
-             <div class="btn-tt"><a href="index.php?act=dathangthanhcong"><input type="submit" name="dathangmuangay" id="" value="Thanh toán"></a></div>
+             <input type="radio" name="pttt" value="Thanh toán bằng tiền mặt" id="" checked> Thanh toán bằng tiền mặt <br>
+             <input type="radio" name="pttt" value="Thanh toán chuyển khoản" id=""> Thanh toán chuyển khoản <br>
+             <!-- </form> -->
+
+            <input type="hidden" name="name" value="<?= $name?>">
+            <input type="hidden" name="hinh" value="<?= $hinh?>">
+            <input type="hidden" name="price" value="<?= $price?>">
+         <div class="btn-tt"><a href="index.php?act=dathangthanhcong"><input type="submit" name="dathangmuangay" id="" value="Thanh toán"></a></div> 
          </div>
-         </form>
+
      </div>
+     </form>
+ </div>
  </div>
  <!-- end main -->
