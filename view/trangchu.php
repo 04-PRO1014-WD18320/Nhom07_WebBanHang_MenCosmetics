@@ -74,14 +74,14 @@
         echo '<div class="product">
                 <div class="product-img-div"><a href="' . $linksp . '"><img src="' . $hinh . '" alt="Product 1"></a></div>
                 <div class="product-description-div"><a class="product-description" href="' . $linksp . '"><p>' . $name . '</p></a></div> <br>
-                <div class="product-price-div"> <p class="product-price">' . $newprice . '₫     <del>' . $price . '₫ </del></p>  </div>
+
+                <div class="product-price-div"> <p class="product-price">' . number_format($newprice) . '₫     <del>' . number_format($price) . '₫ </del></p>  </div>
                 <div><a href=""><form action="'.$themgiohang.'" method="post" onsubmit="submitForm(event)"><button name="themgiohang" class="add-to-cart">Thêm vào giỏ hàng</button></form></a></div>
+
             </div>';
     }
 
     ?>
-
-
 </section>
 
 <div class="h2">

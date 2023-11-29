@@ -1,6 +1,6 @@
 <!-- begin main -->
 <main>
-            <h1 class="h1">ĐỔI MẬT KHẨU</h1>
+            <h1 class="h1">CẬP NHẬT TÀI KHOẢN</h1>
             <div class="form-dn">
                 <form action="/action_page.php" method="post">
                 <div class="container">
@@ -14,8 +14,7 @@
                     <input type="email" placeholder="Nhập email" name="psw" required class="ip-text">
 
                     <div class="btn-dn"> 
-                        <button type="submit">TIẾP TỤC</button><br>
-                        
+                        <button type="submit">LƯU THAY ĐỔI</button><br>                       
                     </div> 
                 </div>
                 
