@@ -69,17 +69,19 @@
     foreach ($spnew as $sp) {
         extract($sp);
         $linksp = "index.php?act=sanphamct&idsp=" . $id;
+        $themgiohang = "index.php?act=themvaogiohang&idsp=" . $id;
         $hinh = $img_path . $hinh;
         echo '<div class="product">
                 <div class="product-img-div"><a href="' . $linksp . '"><img src="' . $hinh . '" alt="Product 1"></a></div>
                 <div class="product-description-div"><a class="product-description" href="' . $linksp . '"><p>' . $name . '</p></a></div> <br>
-                <div class="product-price-div"> <p class="product-price">' . number_format($newprice)  . '₫     <del>' . number_format($price)  . '₫ </del></p>  </div>
-                <div><a href="index.php?act=themvaogiohang&idsp=" '.$id.'><button name="themgiohang" class="add-to-cart">Thêm vào giỏ hàng</button></a></div>
+
+                <div class="product-price-div"> <p class="product-price">' . number_format($newprice) . '₫     <del>' . number_format($price) . '₫ </del></p>  </div>
+                <div><a href=""><form action="'.$themgiohang.'" method="post" onsubmit="submitForm(event)"><button name="themgiohang" class="add-to-cart">Thêm vào giỏ hàng</button></form></a></div>
+
             </div>';
     }
 
     ?>
-
 </section>
 
 <div class="h2">
@@ -91,20 +93,17 @@
     $i = 0;
     foreach ($dsdm as $dm) {
         extract($dm);
-        $linkdm = "index.php?act=sanpham&iddm=".$id;
+        $linkdm = "index.php?act=sanpham&iddm=" . $id;
 
 
         echo '
         <div class="product-boxdanhmuc">
-            <div class="product-img-div"> <a href="'.$linkdm.'"><img src="' . $img[$i] . '" alt="Product 1"></a></div>
+            <div class="product-img-div"> <a href="' . $linkdm . '"><img src="' . $img[$i] . '" alt="Product 1"></a></div>
             <div class="product-name-dm"><p class="product-description">' . $name . '</p></div>
         </div>
     ';
         $i++;
-        
     }
     ?>
-    
-</div>
 
-<!-- end main -->
+</div>
