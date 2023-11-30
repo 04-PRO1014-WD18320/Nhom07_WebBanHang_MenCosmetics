@@ -12,7 +12,8 @@ function loadall_sanpham($kyw = "", $iddm = 0)
             WHERE 1";
 
     if ($kyw != "") {
-        $sql .= " AND sanpham.name LIKE '%" . $kyw . "%'";
+        $kywLower = strtolower($kyw);
+        $sql .= " AND LOWER(sanpham.name) LIKE '%" . $kywLower . "%'";
     }
 
     if ($iddm > 0) {
@@ -63,3 +64,17 @@ function loadall_sanpham_goiy(){
     $listsanpham = pdo_query($sql);
     return  $listsanpham;
 }
+
+// function loadall_sanpham_timkiem($kyw=" ", $iddm=0){
+//     $sql = "select * from sanpham where 1 ";
+//     if($kyw!= ""){
+//         $sql.=" and name like '%".$kyw."%'";
+//     }
+//     if($iddm>0){
+//         $sql.=" and iddm='".$iddm."'";
+//     }
+
+//     $sql.=" order by id desc";
+//     $listdanhmuc = pdo_query($sql);
+//     return  $listdanhmuc;
+// }

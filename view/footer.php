@@ -19,8 +19,8 @@
     </div>
     <div class="site-footer">
       <h5>THEO DÕI CHÚNG TÔI</h5>
-      <li><a href=""><img src="/img/logofb.png" alt="">Facebook</a></li>
-      <li> <a href=""><img src="/img/logo-instagram.png" alt="">Instagram</a></li>
+      <li><a href=""><img src="img/logofb.png" alt="">Facebook</a></li>
+      <li> <a href=""><img src="img/logo-instagram.png" alt="">Instagram</a></li>
     </div>
   </div>
   <div class="footer-content">
