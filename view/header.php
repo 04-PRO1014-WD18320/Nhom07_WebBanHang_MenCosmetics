@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/thanhtoan.css">
     <link rel="stylesheet" href="./css/slideshow.css">
     <link rel="stylesheet" href="./css/qltk.css">
-
+    <link rel="stylesheet" href="./css/dathangthanhcong.css">
 
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"> -->
 </head>
