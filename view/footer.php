@@ -19,8 +19,8 @@
     </div>
     <div class="site-footer">
       <h5>THEO DÕI CHÚNG TÔI</h5>
-      <li><a href=""><img src="img/logofb.png" alt="">Facebook</a></li>
-      <li> <a href=""><img src="img/logo-instagram.png" alt="">Instagram</a></li>
+      <li><a href=""><img src="./img/logofb.png" alt="">Facebook</a></li>
+      <li> <a href=""><img src="./img/logo-instagram.png" alt="">Instagram</a></li>
     </div>
   </div>
   <div class="footer-content">
@@ -32,15 +32,11 @@
 </footer>
 
 </body>
-<script src="main.js">
+<script >
   //   document.querySelector('a').addEventListener('click', function(event) {
   //     event.preventDefault();
   //     // Các hành động khác trong JavaScript
   // });
-  function submitForm(event) {
-        // Ngăn chặn sự kiện mặc định của form
-        event.preventDefault();
-  }
 </script>
 
 </html>

@@ -70,13 +70,16 @@ nav ul li a:hover{
 }
 .search {
     margin-left: 20px;
+    position: relative;
+    align-items: center;
 }
 
 .search .ip-search {
-    padding: 5px;
+    /* padding: 5px; */
     border: 1px solid gray;
     border-radius: 15px;
     width: 700px;
+    padding-right: 30px;
     
 }
 
@@ -85,28 +88,27 @@ nav ul li a:hover{
 } 
 
 .button{
-    background: #F09116;
-    width: 90px;
-    color: #fff;
+    position: absolute;
+    right: 7px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: transparent; 
     border: none;
-    padding: 8px 10px;
-    margin-left: 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
 }
-.button:hover{
-    background-color: #c57915;
+.button svg{
+    /* width: 25px;
+    height: 25px; */
+}
 
-}
 
 .btn-button {
     width: 60px;
     padding: 10px 10px;
     border: none;
     cursor: pointer;
-    
-    /* display: flex; */
-    /* text-align: center; */
     border-radius: 3px;
     align-items: center; 
 }

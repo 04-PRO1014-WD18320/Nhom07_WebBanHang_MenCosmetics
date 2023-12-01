@@ -1,0 +1,14 @@
+.dathangthanhcong{
+    text-align: center;
+}
+.dathangthanhcong img{
+    width: 100px;
+}
+.dathangthanhcong h3{
+    font-size: 50px;
+}
+.dathangthanhcong input[type=button]{
+    height: 20px;
+    width: 200px;
+    background-color: aliceblue;
+}
