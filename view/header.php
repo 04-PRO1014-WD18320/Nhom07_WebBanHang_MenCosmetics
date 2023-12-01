@@ -26,8 +26,10 @@
         </div>
         
         <div class="search">
-            <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search">
-            <button class="button">SEARCH</button>
+            <form action="index.php?act=sanpham" method="post">
+            <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search" name="kyw">
+            <button class="button" type="submit" name="timkiem">SEARCH</button>
+            </form>
         </div>
         <div class="login">
             <a href="index.php?act=qlnguoidung"><img src="img/user.png" alt="" class="btn-button"></a>

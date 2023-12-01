@@ -186,7 +186,7 @@ if (isset($_GET['act'])) {
                 $diachinguoinhan = $_POST['diachi'];
                 $pttt = $_POST['pttt'];
                 $tongtien = $_POST['tongtien'];
-                $ngaydathang= date('d/m/y');
+                $ngaydathang= date("Y-m-d H:i:s");
                 $ghichu = $_POST['ghichu'];
                 $donhang_id = insert_donhang(
                     $idtk,
@@ -238,7 +238,7 @@ if (isset($_GET['act'])) {
                             
                             $pttt = $_POST['pttt'];
                             $tongtien = $_POST['tongtien'];
-                            $ngaydathang= date('d/m/y');
+                            $ngaydathang= date("Y-m-d H:i:s");
                             $ghichu = $_POST['ghichu'];
                             // $trangthai= 'Chờ xác nhận';
 
