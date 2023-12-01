@@ -13,7 +13,7 @@ include "model/donhang.php";
 // if (isset($user['id'])) {
 //     $id = $user['id'];
 // }
-
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 $spnew = loadall_sanpham_home();
 $spgoiy = loadall_sanpham_goiy();
 $dsdm = loadall_danhmuc();
@@ -141,7 +141,9 @@ if (isset($_GET['act'])) {
                     } else {
                         insert_giohang($soluong, $userid, $idsp);
                     }
-                    // header("Location:index.php?act=sanphamct&idsp=$idsp");
+                    // echo '<script>alert("Sản phẩm đã được thêm vào giỏ hàng!");</script>';
+                    echo '<script>window.history.back();</script>';
+                    exit;
                 }
             } else {
                 header('Location: index.php?act=dangnhap');
@@ -165,18 +167,24 @@ if (isset($_GET['act'])) {
                 header("location:index.php?act=giohang");
             }
             break;
-
+        case 'xoatatcagiohang':
+            if (isset($_SESSION['user']['id'])) {
+                $userid = $_SESSION['user']['id'];
+                delete_all_giohang($userid);
+                header("location:index.php?act=giohang");
+            }
+            break;
+        
         case 'thanhtoan':
             if (isset($_SESSION['user']['id'])) {
                 $userid = $_SESSION['user']['id'];
             }
             $tk = loadone_tk($userid);
             $listsanpham = loadall_giohang($userid);
-           
+
             $donhang_id = "";
             if (isset($_POST['muatatca'])) {
                 extract($listsanpham);
-                
             }
             if (isset($_POST['dathang'])) {
                 $idtk = $_POST['id'];
@@ -186,7 +194,7 @@ if (isset($_GET['act'])) {
                 $diachinguoinhan = $_POST['diachi'];
                 $pttt = $_POST['pttt'];
                 $tongtien = $_POST['tongtien'];
-                $ngaydathang= date("Y-m-d H:i:s");
+                $ngaydathang = date('Y-m-d H:i:s');
                 $ghichu = $_POST['ghichu'];
                 $donhang_id = insert_donhang(
                     $idtk,
@@ -256,20 +264,19 @@ if (isset($_GET['act'])) {
 
                             if (isset($_POST['idsp']) ) {
                             $spis = loadone_sanpham($_POST['idsp']);
-                            $name= $spis['name'];
-                            $hinh= $spis['hinh'];
-                            $price= $spis['price'];
+                            $name = $spis['name'];
+                            $hinh = $spis['hinh'];
+                            $price = $spis['price'];
                             insert_donhangchitiet($donhang_id, $id, 1, $price, $hinh, $name);
-                            header("location:index.php?act=dathangthanhcong");  
-                            }  
-                            
+                            header("location:index.php?act=dathangthanhcong");
                         }
                     }
-              } else {
+                }
+            } else {
                 header('Location: index.php?act=dangnhap');
             }
-                include "view/thanhtoanmuangay.php";
-                break;  
+            include "view/thanhtoanmuangay.php";
+            break;
 
         case 'dathangthanhcong':
             include "view/dathangthanhcong.php";
@@ -280,8 +287,8 @@ if (isset($_GET['act'])) {
             break;
 
         case 'qltaikhoan':
-            if(isset($_SESSION['user']['id'])){
-                $tk= loadone_tk($_SESSION['user']['id']);
+            if (isset($_SESSION['user']['id'])) {
+                $tk = loadone_tk($_SESSION['user']['id']);
             }
             include "view/quanlitaikhoan.php";
             break;

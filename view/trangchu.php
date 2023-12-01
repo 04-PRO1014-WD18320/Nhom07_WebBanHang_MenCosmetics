@@ -4,20 +4,18 @@
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-        <img src="./img/Banner1.webp" style="width:100%">
+        <img src="./img/banner15.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="./img/banner2.jpg" style="width:100%">
+        <img src="./img/banner10.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="./img/banner 3.jpg" style="width:100%">
+        <img src="./img/banner12.png" style="width:100%">
     </div>
 
-    <div class="mySlides fade">
-        <img src="./img/banner 4.jpg" style="width:100%">
-    </div>
+
 
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
@@ -61,6 +59,9 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+        // setInterval(function() {
+        //     plusSlides(1);
+        // }, 3000);
     }
 </script>
 

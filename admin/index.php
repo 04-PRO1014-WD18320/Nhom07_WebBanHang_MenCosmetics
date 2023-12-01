@@ -1,10 +1,10 @@
 <?php
 include "header.php";
-
-
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/thongke.php";
+include "../model/donhang.php";
 include "../model/taikhoan.php";
 
 if (isset($_GET['act'])) {
@@ -60,7 +60,7 @@ if (isset($_GET['act'])) {
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
                 } else {
                 }
-                insert_sanpham($tensp, $mota, $giasp,$giamoi, $hinh,$xuatxu,$soluong, $iddm);
+                insert_sanpham($tensp, $mota, $giasp, $giamoi, $hinh, $xuatxu, $soluong, $iddm);
                 $thongbao = 'THÊM THÀNH CÔNG';
             }
             $listdanhmuc = loadall_danhmuc();
@@ -102,7 +102,7 @@ if (isset($_GET['act'])) {
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
                 } else {
                 }
-                update_sanpham($id, $iddm, $tensp, $giasp,$giamoi, $mota, $hinh,$xuatxu,$soluong);
+                update_sanpham($id, $iddm, $tensp, $giasp, $giamoi, $mota, $hinh, $xuatxu, $soluong);
                 $thongbao = 'CẬP NHẬT THÀNH CÔNG';
                 // include "sanpham/edit.php";
             }
@@ -117,17 +117,60 @@ if (isset($_GET['act'])) {
             }
 
             $listsanpham = loadall_sanpham("", 0);
-            include "sanpham/list.php";
+            include "sanpham/list.php";  
             break; 
+        
         case 'listtk':
             $listtk = loadall_tk();
             include "taikhoan/list.php";
             break;
         
-
         case 'home':
             include "home.php";
-            break;       
+            break;
+        case 'thongke':
+
+            $rows = doanhthutheothang();
+            $top5_banchay = top5_sanpham_banchay_theothang();
+            $top5_doanhthu = top5_sanpham_doanhthu_caonhat_thang();
+            // print_r($rows);
+            include "thongke/doanhthu.php";
+            break;
+        case 'donhang':
+            $listdonhang = loadall_donhang_admin();
+            include "donhang/list.php";
+            break;
+        case 'thay-doi-trang-thai':
+            if (isset($_GET['id_donhang']) && isset($_GET['id_trangthai'])) {
+                $id_donhang = $_GET['id_donhang'];
+                $id_trangthai = $_GET['id_trangthai'];
+                switch ($id_trangthai) {
+                    case '1':
+                        $id_trangthai = 2;
+                        break;
+                    case '2':
+                        $id_trangthai = 3;
+                        break;
+                }
+                update_donhang($id_trangthai, $id_donhang);
+                header("location:index.php?act=donhang");
+            }
+            break;
+        case 'huy-don-hang':
+            if (isset($_GET['id_donhang']) && $_GET['id_donhang'] > 0) {
+                $id_donhang = $_GET['id_donhang'];
+                huy_donhang($id_donhang);
+            }
+            header("location:index.php?act=donhang");
+            break;
+        case  'donhangchitiet':
+            if(isset($_GET['id_donhang'])){
+                $id_donhang=$_GET['id_donhang'];
+                $list_dhct=load_donhang_chitiet($id_donhang);
+              }
+              include "donhang/donhangchitiet.php";
+              break;
+            break;
     }
 }
 include "footer.php";
