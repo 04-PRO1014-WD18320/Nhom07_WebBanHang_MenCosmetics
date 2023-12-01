@@ -2,7 +2,7 @@
 <main>
             <h1 class="h1">QUÊN MẬT KHẨU</h1>
             <div class="form-dn">
-                <form action="index.php?act=doimk" method="post">
+                <form action="index.php?act=quenmk" method="post">
                 <div class="container">
                     <label for="uname"><b>Email</b></label>
                     <input type="email" placeholder="Nhập email của bạn" name="email" required class="ip-text">

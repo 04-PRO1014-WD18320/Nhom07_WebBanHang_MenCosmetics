@@ -37,10 +37,10 @@
   //     event.preventDefault();
   //     // Các hành động khác trong JavaScript
   // });
-  function submitForm(event) {
-        // Ngăn chặn sự kiện mặc định của form
-        event.preventDefault();
-  }
+  // function submitForm(event) {
+  //       // Ngăn chặn sự kiện mặc định của form
+  //       event.preventDefault();
+  // }
 </script>
 
 </html>

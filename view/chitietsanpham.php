@@ -60,6 +60,7 @@
 
         <div class="comment">
             <h2>Bình luận</h2>
+            
             <table>
                 <tr>
                     <th>Tài Khoản</th>
@@ -67,17 +68,19 @@
                     <th>Ngày Bình Luận</th>
                 </tr>
 
-                <tr>
-                    <td>huong</td>
-                    <td>đây là bình luận</td>
-                    <td>18/11/2023</td>
-                </tr>
-
-                <tr>
+                <?php foreach ($binhluan as $bl) : ?>
+                    <?php extract($bl) ?>
+                    <tr >
+                        <td > <strong> <?php echo  $bl['user'] ?> </strong> </td>
+                        <td><?php echo $bl['noidung'] ?></td>
+                        <td><?php echo date("d-m-y", strtotime($bl['ngaybinhluan'])) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                <!-- <tr>
                     <td>trang</td>
                     <td>đây là bình luận</td>
                     <td>18/11/2023</td>
-                </tr>
+                </tr> -->
             </table>
         </div>
         <h2>Sản Phẩm Tương Tự</h2>
