@@ -1,4 +1,5 @@
-<footer>&copy; 2023 Bảng điều khiển Admin</footer>
+
+<footer></footer>
   </body>
   <script>
     function toggleSubMenu(element) {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,32 +15,36 @@
     <link rel="stylesheet" href="./css/thanhtoan.css">
     <link rel="stylesheet" href="./css/slideshow.css">
     <link rel="stylesheet" href="./css/qltk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY4Nl+RTtXScMQlL5PaV/PBExl5DO5I5qLGWUp" crossorigin="anonymous">
 
 
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"> -->
 </head>
+
 <body>
     <!-- begin header -->
     <header>
         <div class="logo">
             <a href="index.php"><img src="img/logo.png" alt=""></a>
         </div>
-        
+
         <div class="search">
             <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search">
-            <button class="button">SEARCH</button>
+            <a class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg></a>
         </div>
+
         <div class="login">
             <a href="index.php?act=qlnguoidung"><img src="img/user.png" alt="" class="btn-button"></a>
         </div>
         <div class="giohang">
             <a href="index.php?act=giohang"><img src="img/cart.png" alt="" class="btn-button"></a>
         </div>
-        
-        </nav>
     </header>
-    
-    
+
+
     <div class="placeholder"></div>
     <nav class="menu">
         <ul>
@@ -48,9 +53,9 @@
             <li><a href="index.php?act=sanpham&iddm=4">TÓC</a></li>
             <li><a href="index.php?act=sanpham&iddm=5">DA MẶT</a></li>
             <li><a href="index.php?act=sanpham&iddm=6">CƠ THỂ</a></li>
-            
 
-            
+
+
         </ul>
     </nav>
     <!-- end header -->

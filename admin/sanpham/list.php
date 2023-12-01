@@ -19,6 +19,7 @@
     </form>
     <div class="contents">
         <div class="content">
+        <a href="index.php?act=addsp"  ><input type="button" class="submit" value="THÊM MỚI SẢN PHẨM"></a>
             <table class="danhmuc">
                 <tr>
                     
@@ -65,7 +66,7 @@
             </table>
         </div>
         <!-- <input type="submit" class="submit" value="THÊM MỚI DANH MỤC"> -->
-        <a href="index.php?act=addsp"  ><input type="button" class="submit" value="THÊM MỚI SẢN PHẨM"></a>
+       
 
     </div>
 </div>
