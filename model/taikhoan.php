@@ -28,5 +28,33 @@
        $sql =" UPDATE nguoidung SET user='$user',pass='$pass',email='$email',address='$address',tel='$tel' WHERE id=" .$id;
        pdo_execute($sql);
     }
+    
+    function delete_taikhoan($id){
+        
+        $sql = "DELETE FROM nguoidung WHERE id =" . $id;
+        pdo_execute($sql);
+        
+    }
+
+    function load_bl($id){
+        $sql = "
+        SELECT  binhluan.noidung, binhluan.ngaybinhluan, nguoidung.user from binhluan
+        LEFT JOIN nguoidung ON binhluan.iduser = nguoidung.id
+        LEFT JOIN sanpham ON binhluan.idpro = sanpham.id
+        WHERE sanpham.id = $id LIMIT 0, 25;
+    ";
+    $result = pdo_query($sql);
+    // print_r($result);
+    // die();
+    return $result;
+    }
+
+
+    function loadall_tk(){
+
+        $sql = "SELECT *FROM nguoidung WHERE 1";
+        $tk = pdo_query($sql);
+        return $tk;
+    }
 
 ?>

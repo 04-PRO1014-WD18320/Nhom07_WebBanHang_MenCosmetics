@@ -32,7 +32,7 @@ if (isset($_GET['act'])) {
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
                 $sp_cungloai = load_sanpham_cungloai($id, $iddm);
-                // $binhluan = loadall_binhluan($_GET['idsp']);
+                $binhluan = load_bl($_GET['idsp']);
                 include "view/chitietsanpham.php";
             } else {
                 include "view/trangchu.php";
@@ -86,8 +86,31 @@ if (isset($_GET['act'])) {
             include "view/dangki.php";
 
             break;
+            
+        case "updatetk";
+        if(isset($_SESSION['user']['id'])){
+            $tk= loadone_tk($_SESSION['user']['id']);
+        }
+        if(isset($_POST['luuthaydoi'])&&($_POST['luuthaydoi'])){
+            $user = $_POST['user'];
+            $pass = $_POST['pass'];
+            $email = $_POST['email'];
+            $address = $_POST['address'];
+            $tel = $_POST['tel'];
+            $id = $_POST['id'];
+            // var_dump($user, $pass, $email, $address, $tel);
+            // die();
+            update_tk($id,$user, $pass, $email, $address, $tel);
+            $tb = "cập nhật thành công";
+            $_SESSION['user']= check_user($user,$pass);               
+            header('Location: index.php?act=updatetk');
+            
+        }
+        include "view/update_tk.php";
+        break;
 
-        case "doimk";
+
+        case "quenmk";
             if (isset($_POST['guiemail']) && ($_POST['guiemail'])) {
                 $email = $_POST['email'];
                 $checkemail = check_email($email);
@@ -97,7 +120,7 @@ if (isset($_GET['act'])) {
                     $thongbao_email = "Email này không tồn tại!";
                 }
             }
-            include "view/doimk.php";
+            include "view/quenmk.php";
             break;
 
         case "thoat";
@@ -151,6 +174,7 @@ if (isset($_GET['act'])) {
                 header("location:index.php?act=giohang");
             }
             break;
+        
         case 'thanhtoan':
             if (isset($_SESSION['user']['id'])) {
                 $userid = $_SESSION['user']['id'];
@@ -204,41 +228,41 @@ if (isset($_GET['act'])) {
 
             if (isset($_SESSION['user']['id'])) {
                 $userid = $_SESSION['user']['id'];
-                $tk = loadone_tk($userid);
-                if (isset($_POST['idsp']) && ($_POST > 0)) {
-                    $id = $_POST['idsp'];
-                    $sp = loadone_sanpham($id);
-                    if (isset($_POST['thanhtoanmuangay']) && ($_POST['thanhtoanmuangay'])) {
-                        extract($sp);
-                    }
-                    $donhang_id = "";
-                    if (isset($_POST['dathangmuangay'])) {
-                        $idtk = $_POST['id'];
-                        echo $idtk;
-                        $tennguoinhan = $_POST['user'];
-                        $emailnguoinhan = $_POST['email'];
-                        $sdtnguoinhan = $_POST['tel'];
-                        $diachinguoinhan = $_POST['diachi'];
+                    $tk = loadone_tk($userid);
+                    if (isset($_POST['idsp']) && ($_POST > 0)) {
+                        $id = $_POST['idsp'];
+                        $sp = loadone_sanpham($id);
+                        if (isset($_POST['thanhtoanmuangay']) && ($_POST['thanhtoanmuangay'])) {
+                            extract($sp);
+                        }
+                        $donhang_id = "";
+                        if (isset($_POST['dathangmuangay'])) {
+                            $idtk = $_POST['id'];
+                            echo $idtk;
+                            $tennguoinhan = $_POST['user'];
+                            $emailnguoinhan = $_POST['email'];
+                            $sdtnguoinhan = $_POST['tel'];
+                            $diachinguoinhan = $_POST['diachi'];
+                            
+                            $pttt = $_POST['pttt'];
+                            $tongtien = $_POST['tongtien'];
+                            $ngaydathang= date("Y-m-d H:i:s");
+                            $ghichu = $_POST['ghichu'];
+                            // $trangthai= 'Chờ xác nhận';
 
-                        $pttt = $_POST['pttt'];
-                        $tongtien = $_POST['tongtien'];
-                        $ngaydathang = date('Y-m-d H:i:s');
-                        $ghichu = $_POST['ghichu'];
-                        // $trangthai= 'Chờ xác nhận';
+                            $donhang_id = insert_donhang(
+                                $idtk,
+                                $tennguoinhan,
+                                $emailnguoinhan,
+                                $sdtnguoinhan,
+                                $diachinguoinhan,
+                                $pttt,
+                                $tongtien,
+                                $ngaydathang,
+                                $ghichu
+                            );
 
-                        $donhang_id = insert_donhang(
-                            $idtk,
-                            $tennguoinhan,
-                            $emailnguoinhan,
-                            $sdtnguoinhan,
-                            $diachinguoinhan,
-                            $pttt,
-                            $tongtien,
-                            $ngaydathang,
-                            $ghichu
-                        );
-
-                        if (isset($_POST['idsp'])) {
+                            if (isset($_POST['idsp']) ) {
                             $spis = loadone_sanpham($_POST['idsp']);
                             $name = $spis['name'];
                             $hinh = $spis['hinh'];

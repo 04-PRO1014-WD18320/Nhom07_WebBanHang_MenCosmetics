@@ -23,9 +23,9 @@
       <div class="item"><a href="index.php?act=listsp">Sản phẩm </a></div>
       <div class="item"><a href="index.php?act=listdm">Danh mục</a> </div>
       <div class="item"><a href="">Bình luận</a></div>
-      <div class="item"><a href="">Tài khoản</a></div>
       <div class="item"><a href="index.php?act=donhang">Đơn hàng</a></div>
       <div class="item"><a href="index.php?act=thongke">Thống kê</a></div>
+      <div class="item"><a href="index.php?act=listtk">Tài khoản</a></div>
       <div class="item"><a href="../index.php?act=home">Website</a></div>
 
 

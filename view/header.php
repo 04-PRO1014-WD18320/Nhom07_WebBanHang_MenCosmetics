@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="./css/slideshow.css">
     <link rel="stylesheet" href="./css/qltk.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY4Nl+RTtXScMQlL5PaV/PBExl5DO5I5qLGWUp" crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="./css/dathangthanhcong.css">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"> -->
 </head>
 
@@ -29,11 +28,15 @@
         </div>
 
         <div class="search">
-            <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search">
+          <!--  <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search">
             <a class="button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg></a>
+                </svg></a> -->
+            <form action="index.php?act=sanpham" method="post">
+            <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search" name="kyw">
+            <button class="button" type="submit" name="timkiem">SEARCH</button>
+            </form>
         </div>
 
         <div class="login">

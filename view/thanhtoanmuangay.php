@@ -13,8 +13,8 @@
                  <input type="text" name="diachi" id="" value="<?= $address ?>" placeholder="Nhập địa chỉ">
                  <input type="text" name="tel" id="" placeholder="nhập số điện thoại" value="<?= $tel ?>">
              </div>
-             <label for="" class="lb-tt">Ghi chú đơn hàng</label>
-             <textarea name="ghichu" id="" cols="82%" rows="10"></textarea>
+             <label for="" class="lb-tt">Ghi chú đơn hàng</label> <br>
+             <textarea name="ghichu" id="" cols="82.5%" rows="10"></textarea>
 
 
      </div>
