@@ -22,7 +22,7 @@ function loadlast_donhang_id()
 
 function loadall_donhang()
 {
-    $sql = "select * from donhang";
+    $sql = "select * from donhang WHERE ";
     $listdonhang = pdo_query($sql);
     return $listdonhang;
 }

@@ -5,6 +5,7 @@ include "header.php";
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/taikhoan.php";
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -112,11 +113,18 @@ if (isset($_GET['act'])) {
         case 'deletesp':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_sanpham($_GET['id']);
+
             }
 
             $listsanpham = loadall_sanpham("", 0);
             include "sanpham/list.php";
             break; 
+        case 'listtk':
+            $listtk = loadall_tk();
+            include "taikhoan/list.php";
+            break;
+        
+
         case 'home':
             include "home.php";
             break;       

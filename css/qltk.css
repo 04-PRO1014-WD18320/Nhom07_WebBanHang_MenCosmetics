@@ -1,16 +1,25 @@
 .qltk {
-    width: 80%;
+    width: 55%;
     margin: auto;
 }
 .qltk h1{
     text-align: center;
 }
 .qltk button{
-    margin: auto;
+    width: 100%;
+
+    /* margin: auto; */
     border: 0.5px solid gray; 
 }
 .btn-dx-dmk{
+    display: flex;
     width: 100%;
-    margin-left: 20%;
+    /* margin-left: 20%; */
     margin-bottom: 10px;
+}
+.btn-dx-dmk div{
+    margin-right: 20px;
+    justify-content: right;
+    width: 200px;
+    /* margin-left:; */
 }

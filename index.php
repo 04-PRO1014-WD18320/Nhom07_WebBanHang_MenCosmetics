@@ -32,7 +32,7 @@ if (isset($_GET['act'])) {
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
                 $sp_cungloai = load_sanpham_cungloai($id, $iddm);
-                // $binhluan = loadall_binhluan($_GET['idsp']);
+                $binhluan = load_bl($_GET['idsp']);
                 include "view/chitietsanpham.php";
             } else {
                 include "view/trangchu.php";
@@ -86,8 +86,31 @@ if (isset($_GET['act'])) {
             include "view/dangki.php";
 
             break;
+            
+        case "updatetk";
+        if(isset($_SESSION['user']['id'])){
+            $tk= loadone_tk($_SESSION['user']['id']);
+        }
+        if(isset($_POST['luuthaydoi'])&&($_POST['luuthaydoi'])){
+            $user = $_POST['user'];
+            $pass = $_POST['pass'];
+            $email = $_POST['email'];
+            $address = $_POST['address'];
+            $tel = $_POST['tel'];
+            $id = $_POST['id'];
+            // var_dump($user, $pass, $email, $address, $tel);
+            // die();
+            update_tk($id,$user, $pass, $email, $address, $tel);
+            $tb = "cập nhật thành công";
+            $_SESSION['user']= check_user($user,$pass);               
+            header('Location: index.php?act=updatetk');
+            
+        }
+        include "view/update_tk.php";
+        break;
 
-        case "doimk";
+
+        case "quenmk";
             if (isset($_POST['guiemail']) && ($_POST['guiemail'])) {
                 $email = $_POST['email'];
                 $checkemail = check_email($email);
@@ -97,7 +120,7 @@ if (isset($_GET['act'])) {
                     $thongbao_email = "Email này không tồn tại!";
                 }
             }
-            include "view/doimk.php";
+            include "view/quenmk.php";
             break;
 
         case "thoat";
