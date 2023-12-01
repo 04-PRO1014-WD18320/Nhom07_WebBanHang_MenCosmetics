@@ -64,7 +64,8 @@ main .container .pro .detail h5 {
 .pro .detail .quality {
   display: flex;
   /* padding: 0px 160px 63px 0px; */
-  padding-bottom: 20px;
+  padding-bottom: 70px;
+  /* margin-bottom: ; */
   
 }
 .quality p {
@@ -93,6 +94,7 @@ main .container .pro .detail h5 {
   display: flex;
   /* justify-content: space-between; */
   align-items: flex-end;
+  /* margin-top: 90px; */
 }
 
 
