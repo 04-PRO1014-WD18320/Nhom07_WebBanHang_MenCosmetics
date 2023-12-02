@@ -19,7 +19,7 @@
     </form>
     <div class="contents">
         <div class="content">
-        <a href="index.php?act=addsp"  ><input type="button" class="submit" value="THÊM MỚI SẢN PHẨM"></a>
+             <a href="index.php?act=addsp"  ><input type="button" class="submit" value="THÊM MỚI SẢN PHẨM"></a>
             <table class="danhmuc">
                 <tr>
                     
