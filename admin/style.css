@@ -22,8 +22,8 @@ body {
     display: grid;
     justify-content: end;
   }
-  .plachoder{
-
+  header h1{
+  padding-bottom: 10px;
   }
   nav {
     background-color: #333;

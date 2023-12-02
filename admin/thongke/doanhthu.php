@@ -71,7 +71,7 @@
                 <div class="sanpham">
                     
                 <div class="noidung">
-                    <img src="/upload/' . $hinhAnh . ' " alt="">
+                    <img src="../upload/' . $hinhAnh . ' " alt="">
                     <div class="noidung-sp">
                         <h5>' . $luotMua . ' Lượt mua </h5>
                         <p>Tên sản phẩm: ' . $tenSanPham . ' </p>
@@ -149,7 +149,7 @@
                 <div class="sanpham">
                     
                 <div class="noidung">
-                    <img src="/upload/' . $hinhAnh . ' " alt="">
+                    <img src="../upload/' . $hinhAnh . ' " alt="">
                     <div class="noidung-sp">
                         <h5>Tổng doanh thu: ' . number_format($doanhThu) . '₫ </h5>
                         <p>Tên sản phẩm: ' . $tenSanPham . ' </p>

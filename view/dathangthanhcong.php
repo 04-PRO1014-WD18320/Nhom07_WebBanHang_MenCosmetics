@@ -1,8 +1,8 @@
 <div class="dathangthanhcong">
     <img src="img/dathangthanhcong.png" alt="">
     <H3>Đặt hàng thành công</H3>
-    <a href="index.php?act=home"><input type="button" value="Quay về trang chủ"></a>
-    <input type="button" value="Xem đơn hàng của bạn">
+    <a href="index.php?act=home"><input type="submit" value="Quay về trang chủ"></a>
+    <a href="index.php?act=donhang"><input type="submit" value="Xem đơn hàng của bạn"></a>
 </div>
 
 <h2>Gợi ý cho bạn</h2>

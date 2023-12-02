@@ -296,10 +296,22 @@ if (isset($_GET['act'])) {
         case 'thanhtoan':
             include "view/thanhtoan.php";
             break;
-
-
-
-
+            
+        case  'donhang':
+            if(isset($_SESSION['user']['id'])){
+                $id_nguoidung = $_SESSION['user']['id'];           
+                $donhang =  loadall_donhang_nguoidung($id_nguoidung);
+            }
+                include "view/donhang.php";
+                break;
+           
+        case  'donhangchitiet':
+            if(isset($_GET['id_donhang'])){
+                $id_donhang=$_GET['id_donhang'];
+                $list_dhct=load_donhang_chitiet($id_donhang);
+                }
+                include "view/donhangct.php";
+                break;
 
         default:
             // include "view/trangchu.php";
