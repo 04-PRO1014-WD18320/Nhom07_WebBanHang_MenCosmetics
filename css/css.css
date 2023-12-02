@@ -87,7 +87,7 @@ nav ul li a:hover{
     align-items: start;
 } 
 
-.button{
+.buttonn{
     position: absolute;
     right: 7px; 
     top: 50%; 
@@ -97,6 +97,10 @@ nav ul li a:hover{
     cursor: pointer;
     outline: none;
     padding: 10px;
+    margin: 0px;
+}
+.search button{
+    width: 50px;
 }
 .button svg{
     /* width: 25px;

@@ -133,7 +133,10 @@ if (isset($_GET['act'])) {
             $rows = doanhthutheothang();
             $top5_banchay = top5_sanpham_banchay_theothang();
             $top5_doanhthu = top5_sanpham_doanhthu_caonhat_thang();
-            // print_r($rows);
+            $tong_nguoidung = tong_nguoidung();
+            $tong_sanpham = tong_sanpham();
+            $tong_donhang_trongthang = tong_donhang_trongthang(); 
+            $trangthai_donhang = trangthai_donhang();
             include "thongke/doanhthu.php";
             break;
         case 'donhang':

@@ -48,3 +48,31 @@ function top5_sanpham_doanhthu_caonhat_thang()
     LIMIT 5";
     return pdo_query($sql);
 }
+function tong_nguoidung(){
+    $sql = "SELECT COUNT(*) AS tongnguoidung
+    FROM nguoidung
+    WHERE role = 'nguoidung'";
+    return pdo_query($sql);
+}
+function tong_sanpham(){
+    $sql = "SELECT COUNT(*) AS tongsanpham
+    FROM sanpham";
+    return pdo_query($sql);
+}
+function tong_donhang_trongthang(){
+    $sql = "SELECT COUNT(*) AS tongdonhangtrongthang
+    FROM donhang
+    WHERE MONTH(ngaydat) = MONTH(CURRENT_DATE()) AND YEAR(ngaydat) = YEAR(CURRENT_DATE())";
+    return pdo_query($sql);
+}
+function trangthai_donhang(){
+    $sql = "SELECT
+    ttdh.id AS trangthai_id,
+    ttdh.trangthai,
+    COUNT(dh.id) AS tongtrangthai
+FROM donhang dh
+JOIN trangthaidonhang ttdh ON dh.id_trangthai = ttdh.id
+GROUP BY ttdh.id, ttdh.trangthai;";
+  return pdo_query($sql);
+
+}

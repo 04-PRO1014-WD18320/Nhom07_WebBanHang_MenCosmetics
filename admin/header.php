@@ -9,14 +9,12 @@
   <link rel="stylesheet" href="../css/table.css">
   <link rel="stylesheet" href="../css/formadd.css" />
   <link rel="stylesheet" href="../css/listdm.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css"> -->
+  <link rel="stylesheet" type="text/css" href="https://www.prepbootstrap.com/Content/shieldui-lite/dist/css/light/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-  <header>
-    <h1>Admin Panel</h1>
-  </header>
-  <div class="plachoder"></div>
   <nav>
     <div class="menu-item">
       <div class="item"><a href="index.php?act=home">Trang chủ Admin</a></div>
@@ -31,3 +29,10 @@
 
     </div>
   </nav>
+  <div class="tong">
+    <header>
+      <h1>Admin Panel</h1>
+    </header>
+    <div class="plachoder"></div>
+
+    <div class="container">
