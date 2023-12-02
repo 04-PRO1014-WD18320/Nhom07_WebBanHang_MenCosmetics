@@ -2,7 +2,7 @@
 
 <section>
         <div class="item">
-            <div class="item1"><a href="#">Đơn Hàng</a></div>
+            <div class="item1"><a href="index.php?act=donhang">Đơn Hàng</a></div>
             <div class="item2">
                 <?php 
                if( isset($_SESSION['user'])) {

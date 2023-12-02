@@ -49,6 +49,19 @@
     return $result;
     }
 
+    function loadall_binhluan($idpro){
+        $sql = " SELECT binhluan.id, binhluan.noidung, binhluan.ngaybinhluan, nguoidung.user, sanpham.name from binhluan
+        LEFT JOIN nguoidung ON binhluan.iduser = nguoidung.id
+        LEFT JOIN sanpham ON binhluan.idpro = sanpham.id
+        WHERE 1";
+        if($idpro > 0)
+            $sql.=" AND idpro='".$idpro."'";
+            $sql.=" order by id desc";
+        $lisbl = pdo_query($sql);
+        return $lisbl;
+           
+        
+    }
 
     function loadall_tk(){
 

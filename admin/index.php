@@ -124,6 +124,11 @@ if (isset($_GET['act'])) {
             $listtk = loadall_tk();
             include "taikhoan/list.php";
             break;
+
+        case 'listbl':
+            $listbl = loadall_binhluan(0);
+            include "binhluan/binhluan.php";
+            break;    
         
         case 'home':
             include "home.php";
@@ -163,6 +168,7 @@ if (isset($_GET['act'])) {
             }
             header("location:index.php?act=donhang");
             break;
+            
         case  'donhangchitiet':
             if(isset($_GET['id_donhang'])){
                 $id_donhang=$_GET['id_donhang'];
@@ -172,5 +178,7 @@ if (isset($_GET['act'])) {
               break;
             break;
     }
+
+    
 }
 include "footer.php";
