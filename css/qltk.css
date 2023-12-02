@@ -17,6 +17,9 @@
     /* margin-left: 20%; */
     margin-bottom: 10px;
 }
+.btn-dx-dmk a{
+    font-size: small;
+}
 .btn-dx-dmk div{
     margin-right: 20px;
     justify-content: right;

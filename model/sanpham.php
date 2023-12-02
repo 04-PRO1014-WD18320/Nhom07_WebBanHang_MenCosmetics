@@ -54,7 +54,7 @@ function loadall_sanpham_home(){
 }
 function load_sanpham_cungloai($id, $iddm)
 {
-    $sql = "SELECT *FROM sanpham WHERE iddm=" . $iddm . " AND id <>" . $id;
+    $sql = "SELECT *FROM sanpham WHERE iddm=" . $iddm . " AND id <>" . $id . " order by iddm desc limit 5";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }

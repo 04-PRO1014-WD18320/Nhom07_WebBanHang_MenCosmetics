@@ -124,6 +124,11 @@ if (isset($_GET['act'])) {
             $listtk = loadall_tk();
             include "taikhoan/list.php";
             break;
+
+        case 'listbl':
+            $listbl = loadall_binhluan(0);
+            include "binhluan/binhluan.php";
+            break;    
         
         case 'home':
             include "home.php";
@@ -133,7 +138,10 @@ if (isset($_GET['act'])) {
             $rows = doanhthutheothang();
             $top5_banchay = top5_sanpham_banchay_theothang();
             $top5_doanhthu = top5_sanpham_doanhthu_caonhat_thang();
-            // print_r($rows);
+            $tong_nguoidung = tong_nguoidung();
+            $tong_sanpham = tong_sanpham();
+            $tong_donhang_trongthang = tong_donhang_trongthang(); 
+            $trangthai_donhang = trangthai_donhang();
             include "thongke/doanhthu.php";
             break;
         case 'donhang':
@@ -163,6 +171,7 @@ if (isset($_GET['act'])) {
             }
             header("location:index.php?act=donhang");
             break;
+            
         case  'donhangchitiet':
             if(isset($_GET['id_donhang'])){
                 $id_donhang=$_GET['id_donhang'];
@@ -172,5 +181,7 @@ if (isset($_GET['act'])) {
               break;
             break;
     }
+
+    
 }
 include "footer.php";
