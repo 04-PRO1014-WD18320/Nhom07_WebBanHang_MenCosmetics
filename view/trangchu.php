@@ -4,15 +4,15 @@
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-        <img src="./img/banner15.png" style="width:100%">
+        <img src="/img/banner15.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="./img/banner10.png" style="width:100%">
+        <img src="/img/banner10.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="./img/banner12.png" style="width:100%">
+        <img src="/img/banner12.png" style="width:100%">
     </div>
 
 
@@ -55,13 +55,13 @@
             slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+            dots[i].className = dots[i].className.replace("active", "");
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setInterval(function() {
-            plusSlides(1);
-        }, 3000);
+        // setInterval(function() {
+        //     plusSlides(0.5);
+        // }, 3000);
     }
 </script>
 
@@ -77,7 +77,7 @@
                 <div class="product-description-div"><a class="product-description" href="' . $linksp . '"><p>' . $name . '</p></a></div> <br>
 
                 <div class="product-price-div"> <p class="product-price">' . number_format($newprice) . '₫     <del>' . number_format($price) . '₫ </del></p>  </div>
-                <div><a href=""><form action="'.$themgiohang.'" method="post" onsubmit="submitForm(event)"><button name="themgiohang" class="add-to-cart">Thêm vào giỏ hàng</button></form></a></div>
+                <div class="themgiohang"><a href=""><form action="'.$themgiohang.'" method="post" onsubmit="submitForm(event)"><button name="themgiohang" class="add-to-cart">Thêm vào giỏ hàng</button></form></a></div>
 
             </div>';
     }
