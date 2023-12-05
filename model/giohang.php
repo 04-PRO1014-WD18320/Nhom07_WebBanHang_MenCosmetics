@@ -15,7 +15,7 @@ function update_giohang($soluong, $id) {
     pdo_execute($sql, $soluong, $id);
 }
 function loadall_giohang($id){
-    $sql = "SELECT giohang.idsp, giohang.id, giohang.soluong, sanpham.name,  sanpham.price, sanpham.hinh
+    $sql = "SELECT giohang.idsp, giohang.id, giohang.soluong, sanpham.name,  sanpham.newprice, sanpham.hinh
     FROM giohang
     JOIN sanpham ON sanpham.id = giohang.idsp
     WHERE giohang.iduser = $id

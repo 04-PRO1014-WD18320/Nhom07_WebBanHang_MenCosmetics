@@ -73,13 +73,13 @@ JOIN
 }
 
 
-function loadall_donhang_nguoidung()
+function loadall_donhang_nguoidung($id)
 {
     $sql = "SELECT donhang.id,  tennguoinhan, sdtnguoinhan, diachinguoinhan, pttt, tongtien, ghichu, trangthai, ngaydat, id_trangthai 
             FROM donhang 
             JOIN trangthaidonhang ON trangthaidonhang.id = donhang.id_trangthai
             JOIN nguoidung on nguoidung.id = donhang.idtk
-            
+            WHERE donhang.idtk = $id
             ORDER BY donhang.ngaydat DESC ";
     $donhang = pdo_query($sql);
     return $donhang;

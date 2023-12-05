@@ -76,12 +76,23 @@
                         <td><?php echo date("d-m-y", strtotime($bl['ngaybinhluan'])) ?></td>
                     </tr>
                 <?php endforeach; ?>
-                <!-- <tr>
-                    <td>trang</td>
-                    <td>đây là bình luận</td>
-                    <td>18/11/2023</td>
-                </tr> -->
-            </table>
+                </table>
+                <form action="" method="POST">
+                    <input type="hidden" name="idpro" value="<?= $_GET['idsp'] ?>">
+                    <input type="hidden" name="iduser" value="<?= isset($_SESSION['user']['id']) ? $_SESSION['user']['id'] : '' ?>">
+
+                    <?php if (!empty($_SESSION['user'])) : ?>
+                        <input type="text" class="" name="noidung" placeholder="nội dung bình luận....">
+                        <input type="submit" name="guibinhluan" value="Gửi bình luận">
+                    <?php
+                    else :
+                    ?>
+                        <input type="text" class="" placeholder="Đăng nhập để thực hiện chức năng bình luận!" disabled width="600px">
+                    <?php
+
+                    endif; ?>
+                </form>
+            
         </div>
         <h2>Sản Phẩm Tương Tự</h2>
         <div class="samePro">
