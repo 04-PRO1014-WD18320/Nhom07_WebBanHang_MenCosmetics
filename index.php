@@ -9,6 +9,7 @@ include "model/taikhoan.php";
 include "model/giohang.php";
 include "view/header.php";
 include "model/donhang.php";
+include "model/binhluan.php";
 
 // if (isset($user['id'])) {
 //     $id = $user['id'];
@@ -27,6 +28,11 @@ if (isset($_GET['act'])) {
 
 
         case 'sanphamct':
+            if(isset($_POST['guibinhluan'])){
+                extract($_POST);
+                //var_dump($_POST);
+                insert_binhluan($idpro, $noidung,$iduser);
+            }
             if (isset($_GET['idsp']) && ($_GET > 0)) {
                 $id = $_GET['idsp'];
                 $onesp = loadone_sanpham($id);
@@ -58,14 +64,21 @@ if (isset($_GET['act'])) {
 
         case 'dangnhap':
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
                 $checkuser = check_user($user, $pass);
                 if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;
                     $thongbao = "Bạn đã đăng nhập thành công!";
-                    header('Location: index.php?act=home');
-                } else {
+                    // header('Location: index.php?act=home');
+                    if($checkuser['role'] == "admin"){
+                        header('Location: admin/index.php?act=home');
+                    } else{
+                        header('Location: index.php?act=home');
+                    }
+                } 
+                else{
                     $thongbao = "Tài khoản không tồn tại! Vui lòng kiểm tra hoặc đăng kí tài khoản mới";
                 }
             }
@@ -213,7 +226,7 @@ if (isset($_GET['act'])) {
                 foreach ($listsanpham as $sp) {
                     extract($sp);
 
-                    insert_donhangchitiet($donhang_id, $idsp, $soluong, $price, $hinh, $name);
+                    insert_donhangchitiet($donhang_id, $idsp, $soluong, $newprice, $hinh, $name);
                     //sau khi đặt hàng thành công thì xóa giỏ hàng
                     delete_giohang($id);
                 }
@@ -266,7 +279,7 @@ if (isset($_GET['act'])) {
                             $spis = loadone_sanpham($_POST['idsp']);
                             $name = $spis['name'];
                             $hinh = $spis['hinh'];
-                            $price = $spis['price'];
+                            $price = $spis['newprice'];
                             insert_donhangchitiet($donhang_id, $id, 1, $price, $hinh, $name);
                             header("location:index.php?act=dathangthanhcong");
                         }
@@ -276,6 +289,10 @@ if (isset($_GET['act'])) {
                 header('Location: index.php?act=dangnhap');
             }
             include "view/thanhtoanmuangay.php";
+            break;
+
+        case 'qlnguoidung':
+            include "view/qlnguoidung.php";
             break;
 
         case 'dathangthanhcong':
@@ -299,8 +316,13 @@ if (isset($_GET['act'])) {
             
         case  'donhang':
             if(isset($_SESSION['user']['id'])){
-                $id_nguoidung = $_SESSION['user']['id'];           
+                $id_nguoidung = $_SESSION['user']['id'];  
                 $donhang =  loadall_donhang_nguoidung($id_nguoidung);
+                if(empty($donhang)){{
+                    // echo"Người dùng chưa có đơn hàng nào";
+                }
+
+                }
             }
                 include "view/donhang.php";
                 break;
@@ -309,6 +331,8 @@ if (isset($_GET['act'])) {
             if(isset($_GET['id_donhang'])){
                 $id_donhang=$_GET['id_donhang'];
                 $list_dhct=load_donhang_chitiet($id_donhang);
+                // print_r($list_dhct) ;
+                // die();
                 }
                 include "view/donhangct.php";
                 break;
