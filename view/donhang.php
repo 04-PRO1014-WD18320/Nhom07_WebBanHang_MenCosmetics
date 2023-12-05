@@ -13,12 +13,12 @@
     
     <div class="contents">
         <div class="content">
-            <table class="table table-bordered " >
+        <?php if($donhang != []) {?>
+            <table id="customers" >
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Khách hàng</th>                      
-                        <th>Ngày tạo</th>
+                    <tr>   
+                        <th>Tên khách hàng</th>                   
+                        <th>Ngày đặt</th>
                         <th>Địa chỉ nhận</th>
                         <th>Số điện thoại</th>
                         <th>Ghi chú</th>
@@ -30,15 +30,16 @@
                 </thead>
                 <tbody>
                     <?php
+                    
                     foreach ($donhang as  $dh) :
                         extract($dh);
                        $dhct= "index.php?act=donhangchitiet&id_donhang=$id"
 
                     ?>
                         <tr>
+                        <input type="hidden" value="<?=$id?>">
                             
-                            <td><?=$id?></td>
-                            <td><?=$tennguoinhan?></td>
+                        <td><?=$tennguoinhan?></td>
                             <td><?=$ngaydat?></td>
                             <td><?=$diachinguoinhan?></td>
                             <td><?=$sdtnguoinhan?></td>
@@ -52,6 +53,9 @@
                     <?php  endforeach; ?>
                 </tbody>
             </table>
+            <?php }else{
+                echo "Người dùng chưa có đơn hàng nào";
+                }?>
         </div>
         
         <!-- <input type="submit" class="submit" value="THÊM MỚI DANH MỤC"> -->

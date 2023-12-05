@@ -29,16 +29,16 @@
              foreach($listsanpham as $sp){
                 extract($sp);
                 $tongsl += $sp['soluong'];
-                $tonggia += $sp['soluong']* $sp['price'];
+                $tonggia += $sp['soluong']* $sp['newprice'];
 
          ?>
             <div class="box-sp-donhang">
                 <img src="upload/<?=$sp['hinh']?>" alt="">
                 <div class="tt-sp-donhang">
                     <p><strong><?= $sp['name']?></strong></p>
-                    <p>Giá:<?= number_format($sp['price']) ?> VNĐ</p>
+                    <p>Giá:<?= number_format($sp['newprice']) ?> VNĐ</p>
                     <p>Số lượng: <?=$sp['soluong']?></p>
-                    <p>Tổng: <?= number_format($sp['soluong']*$sp['price']) ?> VNĐ</p>
+                    <p>Tổng: <?= number_format($sp['soluong']*$sp['newprice']) ?> VNĐ</p>
                 </div> 
             </div>
 
@@ -64,8 +64,8 @@
          </div>
          <hr>
          <div class="ht-thanhtoan">
-             <input type="radio" name="pttt" id="" checked> Thanh toán bằng tiền mặt <br>
-             <input type="radio" name="pttt" id=""> Thanh toán chuyển khoản <br>
+             <input type="radio" name="pttt" id="" value="Thanh toán bằng tiền mặt" checked> Thanh toán bằng tiền mặt <br>
+             <input type="radio" name="pttt" id="" value="Thanh toán chuyển khoản"> Thanh toán chuyển khoản <br>
              <div class="btn-tt"><a href="index.php?act=dathangthanhcong"><input type="submit" name="dathang" id="" value="Thanh toán"></a></div>
          </div>
          </form>

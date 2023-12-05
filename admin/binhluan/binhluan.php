@@ -27,7 +27,7 @@
                             <td>'.$user.'</td>
                             <td>'.$name.'</td>
                             <td>'.$noidung.'</td>
-                            <td>'.$ngaybinhluan.'</td>
+                            <td>'.date("d-m-y", strtotime($ngaybinhluan)).'</td>
                             
                             
                         </tr>';

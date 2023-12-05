@@ -59,10 +59,6 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        // setInterval(function() {
-        //     plusSlides(0.5);
-        // }, 3000);
-    }
 </script>
 
 <section class="products">
