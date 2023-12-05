@@ -29,7 +29,7 @@
 
             extract($sp);
 
-            $tonggia = $soluong * $price;
+            $tonggia = $soluong * $newprice;
             $soluong = 1;
             ?>
          <input type="hidden" name="idsp" value="<?= $id ?>">
@@ -38,9 +38,9 @@
              <img src="upload/<?= $hinh ?>" alt="">
              <div class="tt-sp-donhang">
                  <p><strong><?= $name ?></strong></p>
-                 <p>Giá:<?= number_format($price) ?> VNĐ</p>
+                 <p>Giá:<?= number_format($newprice) ?> VNĐ</p>
                  <p>Số lượng: <?= $soluong ?></p>
-                 <p>Tổng: <?= number_format($soluong * $price) ?> VNĐ</p>
+                 <p>Tổng: <?= number_format($soluong * $newprice) ?> VNĐ</p>
              </div>
          </div>
 
@@ -53,7 +53,7 @@
             $phivc = 20000;
             echo '
             <div class="tamtinh">
-                Tạm tính: <strong>' . number_format($price) . 'Đ</strong>
+                Tạm tính: <strong>' . number_format($newprice) . 'Đ</strong>
             </div>';
             ?>
          <hr>
@@ -61,8 +61,8 @@
          <div class="vanchuyen">
              <h4>Giao Hàng</h4>
              <p>Phí vận chuyển: 20.000Đ</p>
-             <div class="tong"><strong>Tổng: <?php echo number_format($phivc + $price) ?>Đ</strong></div>
-             <input type="hidden" name="tongtien" value="<?= $phivc + $price ?>">
+             <div class="tong"><strong>Tổng: <?php echo number_format($phivc + $newprice) ?>Đ</strong></div>
+             <input type="hidden" name="tongtien" value="<?= $phivc + $newprice ?>">
          </div>
          <hr>
          <div class="ht-thanhtoan">
@@ -72,7 +72,7 @@
 
             <input type="hidden" name="name" value="<?= $name?>">
             <input type="hidden" name="hinh" value="<?= $hinh?>">
-            <input type="hidden" name="price" value="<?= $price?>">
+            <input type="hidden" name="newprice" value="<?= $newprice?>">
          <div class="btn-tt"><a href="index.php?act=dathangthanhcong"><input type="submit" name="dathangmuangay" id="" value="Thanh toán"></a></div> 
          </div>
 

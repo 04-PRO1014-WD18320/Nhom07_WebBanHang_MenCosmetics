@@ -48,7 +48,7 @@ function delete_sanpham($id)
 }
 
 function loadall_sanpham_home(){
-    $sql = "select * from sanpham where 1 order by id desc  ";    
+    $sql = "select * from sanpham where 1 order by id desc limit 0,15  ";    
     $listsanpham = pdo_query($sql);
     return  $listsanpham;
 }

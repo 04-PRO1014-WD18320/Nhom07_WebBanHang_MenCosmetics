@@ -13,7 +13,7 @@
                     <label for="psw"><b>EMAIL</b></label>
                     <input type="email" placeholder="Nhập email" name="email" required class="ip-text">
 
-                    <div class="btn-dn"> 
+                    <div class="btn-dn" > 
                         <input type="submit" value="Đăng kí" name="dangki"> <br>
                         <a href="index.php?act=dangnhap">Đăng nhập?</a>
                         
@@ -21,7 +21,7 @@
                 </div>
                 
                   <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn"><a href="index.php?act=home">Cancel</a></button>
+                    <button type="button" class="cancelbtn"><a href="index.php?act=qlnguoidung">Cancel</a></button>
                     
                   </div>
                 </form>

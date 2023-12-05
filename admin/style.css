@@ -16,7 +16,7 @@ body {
     padding: 0.1em;
     text-align: center;
     width: 1400px;
-    height: 40px;
+    /* height: 40px; */
   }
   .tong{
     display: grid;
@@ -68,12 +68,15 @@ body {
     /* z-index: 2; */
   }
   
-  .sub-item:hover {
+  /* .sub-item:hover {
     background-color: #606060;
+  } */
+  nav .item a:hover {
+    /* background-color: #404040; */
+    color: #fff !important;
   }
-  nav .item:hover {
+  nav .item :hover{
     background-color: #404040;
-    color: #fff;
   }
   .container{
     width: 1440px;

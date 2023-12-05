@@ -20,7 +20,7 @@
                 
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" class="cancelbtn"><a href="index.php?act=qlnguoidung">Cancel</a></button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <span class="psw">Quên <a href="index.php?act=quenmk">mật khẩu?</a></span>
                   </div>
                 </form>
                 <h6 style="color: red;">

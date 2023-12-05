@@ -9,7 +9,9 @@
                 
                    <?php 
                    if(isset($thongbao_email)&&($thongbao_email!="")){
-                    echo $thongbao_email;
+                    echo $thongbao_email.'<br>';
+
+                    echo '<a href="index.php?act=dangnhap">Đăng nhập</a>';
                 }
                    ?>
 
