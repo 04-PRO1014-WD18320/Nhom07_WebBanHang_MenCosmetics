@@ -30,7 +30,7 @@
         </div>
 
         <div class="search">
-          
+
             <form action="index.php?act=sanpham" method="post">
                 <input type="text" placeholder="Tìm kiếm sản phẩm..." required class="ip-search" name="kyw">
                 <button class="buttonn" type="submit" name="timkiem"> <a class="buttonn">
@@ -39,7 +39,6 @@
                         </svg></a></button>
             </form>
         </div>
-      
 
         <div class="login">
             <a href="index.php?act=qlnguoidung"><img src="img/user.png" alt="" class="btn-button"></a>

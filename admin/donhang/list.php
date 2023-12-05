@@ -20,7 +20,7 @@
 
                     <th>ID</th>
                     <th>Khách hàng</th>
-                    <th>Ngày tạo</th>
+                    <th>Ngày đặt hàng</th>
                     <th>Tổng tiền</th>
                     <th>Ghi chú</th>
                     <th>Trạng thái</th>
@@ -37,7 +37,7 @@
                         <td><?= $id ?></td>
                         <td><?= $tennguoinhan ?></td>
                         <td><?= $ngaydat ?></td>
-                        <td><?= $tongtien ?></td>
+                        <td> <?=number_format( $tongtien); echo'₫'; ?></td>
                         <td><?= $ghichu ?></td>
                         <?php
                         $class_ttdh = "";

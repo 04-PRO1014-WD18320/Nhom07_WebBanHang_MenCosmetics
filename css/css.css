@@ -299,3 +299,10 @@ del{
 .footer-content p{
     margin: 20px;
 }
+.themgiohang{
+    margin-left: 30px;
+}
+.themgiohang a{
+    color: #fff;
+    text-decoration: none;
+}
