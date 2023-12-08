@@ -59,6 +59,7 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+    }
 </script>
 
 <section class="products">
@@ -89,6 +90,7 @@
     $img = ['img/dm/daugoi.jpg', 'img/dm/suaruamat.jpg', 'img/dm/sap.jpg'];
     $i = 0;
     foreach ($dsdm as $dm) {
+      
         extract($dm);
         $linkdm = "index.php?act=sanpham&iddm=" . $id;
 

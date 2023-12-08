@@ -30,22 +30,24 @@
                 </thead>
                 <tbody>
                     <?php
-                    
+                   
                     foreach ($donhang as  $dh) :
                         extract($dh);
+                        $formattedPhoneNumber = substr($sdtnguoinhan, 0, 1) === '0' ? $sdtnguoinhan : '0' . $sdtnguoinhan;
                        $dhct= "index.php?act=donhangchitiet&id_donhang=$id"
-
+                      
                     ?>
+                   
                         <tr>
                         <input type="hidden" value="<?=$id?>">
                             
                         <td><?=$tennguoinhan?></td>
                             <td><?=$ngaydat?></td>
                             <td><?=$diachinguoinhan?></td>
-                            <td><?=$sdtnguoinhan?></td>
+                            <td><?=$formattedPhoneNumber?></td>
                             <td><?=$ghichu?></td>
                             <td><?=$pttt?></td>
-                            <td><?= number_format($tongtien)?>Đ</td>
+                            <td><?= number_format($tongtien)?>₫</td>
                             <td><?=$trangthai?></td>
                             <td><a href="<?=$dhct?>">Xem chi tiết</a></td>
                         </tr>
