@@ -11,7 +11,7 @@
     </div>
     <div class="site-footer">
       <h5>ĐIỀU KHOẢN DỊCH VỤ</h5>
-      <li><a href="">Chính sách & quy định</a></li>
+      <li><a href="index.php?act=chinhsachquydinh">Chính sách & quy định</a></li>
       <li><a href="">Chính sách thanh toán</a></li>
       <li><a href="">Chính sách đổi trả</a></li>
       <li><a href="">Chính sách bảo mật thông tin</a></li>
@@ -32,11 +32,11 @@
 </footer>
 
 </body>
-<script >
-  //   document.querySelector('a').addEventListener('click', function(event) {
-  //     event.preventDefault();
-  //     // Các hành động khác trong JavaScript
-  // });
+<script>
+    document.getElementById('backButton').addEventListener('click', function() {
+        // Quay lại trang trước
+        window.history.back();
+    });
 </script>
 
 </html>

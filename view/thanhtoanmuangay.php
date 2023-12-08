@@ -38,9 +38,9 @@
              <img src="upload/<?= $hinh ?>" alt="">
              <div class="tt-sp-donhang">
                  <p><strong><?= $name ?></strong></p>
-                 <p>Giá:<?= number_format($newprice) ?> VNĐ</p>
+                 <p>Giá:<?= number_format($newprice) ?> ₫</p>
                  <p>Số lượng: <?= $soluong ?></p>
-                 <p>Tổng: <?= number_format($soluong * $newprice) ?> VNĐ</p>
+                 <p>Tổng: <?= number_format($soluong * $newprice) ?> ₫</p>
              </div>
          </div>
 

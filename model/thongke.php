@@ -3,12 +3,14 @@
 function doanhthutheothang()
 {
     $sql = "SELECT 
-        MONTH(ngaydat) AS thang, 
-        YEAR(ngaydat) AS nam, 
+        DAY(ngaydat) AS ngay, 
+        MONTH(ngaydat) AS thang,
+        YEAR(ngaydat) AS nam,
         SUM(tongtien) AS tongDoanhThu
     FROM donhang
-    GROUP BY thang, nam
-    ORDER BY nam DESC, thang DESC";
+    WHERE MONTH(ngaydat) = MONTH(CURRENT_DATE()) AND YEAR(ngaydat) = YEAR(CURRENT_DATE())
+    GROUP BY ngay,thang,nam
+    ORDER BY ngay;";
     return pdo_query($sql);
 }
 function top5_sanpham_banchay_theothang()
@@ -48,24 +50,28 @@ function top5_sanpham_doanhthu_caonhat_thang()
     LIMIT 5";
     return pdo_query($sql);
 }
-function tong_nguoidung(){
+function tong_nguoidung()
+{
     $sql = "SELECT COUNT(*) AS tongnguoidung
     FROM nguoidung
     WHERE role = 'nguoidung'";
     return pdo_query($sql);
 }
-function tong_sanpham(){
+function tong_sanpham()
+{
     $sql = "SELECT COUNT(*) AS tongsanpham
     FROM sanpham";
     return pdo_query($sql);
 }
-function tong_donhang_trongthang(){
+function tong_donhang_trongthang()
+{
     $sql = "SELECT COUNT(*) AS tongdonhangtrongthang
     FROM donhang
     WHERE MONTH(ngaydat) = MONTH(CURRENT_DATE()) AND YEAR(ngaydat) = YEAR(CURRENT_DATE())";
     return pdo_query($sql);
 }
-function trangthai_donhang(){
+function trangthai_donhang()
+{
     $sql = "SELECT
     ttdh.id AS trangthai_id,
     ttdh.trangthai,
@@ -73,6 +79,5 @@ function trangthai_donhang(){
 FROM donhang dh
 JOIN trangthaidonhang ttdh ON dh.id_trangthai = ttdh.id
 GROUP BY ttdh.id, ttdh.trangthai;";
-  return pdo_query($sql);
-
+    return pdo_query($sql);
 }

@@ -30,24 +30,43 @@
                 </thead>
                 <tbody>
                     <?php
-                    
+                   
                     foreach ($donhang as  $dh) :
                         extract($dh);
+                        $formattedPhoneNumber = substr($sdtnguoinhan, 0, 1) === '0' ? $sdtnguoinhan : '0' . $sdtnguoinhan;
                        $dhct= "index.php?act=donhangchitiet&id_donhang=$id"
-
+                      
                     ?>
+                   
                         <tr>
                         <input type="hidden" value="<?=$id?>">
                             
                         <td><?=$tennguoinhan?></td>
                             <td><?=$ngaydat?></td>
                             <td><?=$diachinguoinhan?></td>
-                            <td><?=$sdtnguoinhan?></td>
+                            <td><?=$formattedPhoneNumber?></td>
                             <td><?=$ghichu?></td>
                             <td><?=$pttt?></td>
                             <td><?= number_format($tongtien)?>Đ</td>
-                            <td><?=$trangthai?></td>
-                            <td><a href="<?=$dhct?>">Xem chi tiết</a></td>
+                           <?php $class_ttdh = "";
+                        switch ($trangthai) {
+                            case 'Chờ xử lý':
+                                $class_ttdh ="btn-color-vang";
+                                break;
+                            case 'Đã xác nhận':
+                                $class_ttdh ="btn-color-xanhblue";
+                                break;
+                            case 'Đã hoàn thành':
+                                $class_ttdh = "btn-color-xanhgreen";
+                                break;
+                            case 'Đã hủy':
+                                $class_ttdh = "btn-color-red";
+                                break;
+                        }
+                        ?>
+                            <td><p class="<?=$class_ttdh?>"><?=$trangthai?></p></td>
+                            <td><a class="xemchitiet" href="<?=$dhct?>">Xem chi tiết</a></td>
+
                         </tr>
                         
                     <?php  endforeach; ?>

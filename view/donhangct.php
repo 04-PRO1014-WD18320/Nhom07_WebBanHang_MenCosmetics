@@ -3,7 +3,7 @@
     .container {
         /* max-width: 80%; */
         
-      
+      width: 100%;
     }
 
     h1 {
@@ -25,8 +25,8 @@
     }
 
     .order-item img {
-        width: 80px;
-        height: 80px;
+        width: 130px;
+        height: 130px;
         margin-right: 10px;
     }
 
@@ -36,6 +36,7 @@
 
     .order-item-details p {
         margin: 0;
+        margin-bottom: 10px;
     }
 
     .total {
@@ -50,11 +51,11 @@
     }
 
     .tong .tongtien {
-        margin-left: 400px;
+        margin-left: 700px;
         margin-bottom: 10px;
     }
     .box{
-        max-width: 60%;
+        max-width: 80%;
         margin: 20px auto;
         background-color: #fff;
         padding: 20px;
@@ -123,3 +124,4 @@
     </div>
     </div>
     <hr>
+</div>

@@ -42,9 +42,8 @@
                             <td><?=$diachinguoinhan?></td>
                             <td><img style="width: 100px; height: 100px;"  src="../upload/<?= $img ?>" alt=""></td>
                             <td><?=$name_sp?></td>
-                           
                             <td><?=$soluong?></td>
-                            <td><?=$tongtien?></td>
+                            <td><?=number_format( $tongtien); echo "₫"?></td>
                         </tr>
                         
                     <?php break; endforeach; ?>

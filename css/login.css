@@ -26,24 +26,29 @@ input[type=text], input[type=password] ,input[type=email] {
   align-items: start;
 }
 .btn-dn input[type=submit],button {
-   background-color: #F09116; 
+   background-color: #00472cdd; 
    color: white; 
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 30%;
+  border-radius: 5px;
   
 }
 
-.btn-dn input[type=submit],button:hover{
-  /* background-color: #c47713; */
-}
+/* .btn-dn input[type=submit],button:hover{
+  background-color: #00472C;
+} */
 
-.cancelbtn {
+.container button {
   width: auto;
   padding: 10px 18px;
-  background-color: #f44336;
+  /* background-color: #f44336b5; */
+}
+.container button :hover{
+  /* background-color: inherit; */
+  /* background-color: #f44336 */
 }
 .cancelbtn a{
   text-decoration: none;

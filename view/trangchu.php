@@ -4,15 +4,15 @@
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-        <img src="/img/banner15.png" style="width:100%">
+        <img src="./img/banner15.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="/img/banner10.png" style="width:100%">
+        <img src="./img/banner10.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="/img/banner12.png" style="width:100%">
+        <img src="./img/banner12.png" style="width:100%">
     </div>
 
 
@@ -59,6 +59,7 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+    }
 </script>
 
 <section class="products">
@@ -89,6 +90,7 @@
     $img = ['img/dm/daugoi.jpg', 'img/dm/suaruamat.jpg', 'img/dm/sap.jpg'];
     $i = 0;
     foreach ($dsdm as $dm) {
+      
         extract($dm);
         $linkdm = "index.php?act=sanpham&iddm=" . $id;
 
