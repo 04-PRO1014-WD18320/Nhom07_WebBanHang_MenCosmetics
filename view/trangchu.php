@@ -4,15 +4,15 @@
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-        <img src="/img/banner15.png" style="width:100%">
+        <img src="./img/banner15.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="/img/banner10.png" style="width:100%">
+        <img src="./img/banner10.png" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-        <img src="/img/banner12.png" style="width:100%">
+        <img src="./img/banner12.png" style="width:100%">
     </div>
 
 
