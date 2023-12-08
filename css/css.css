@@ -98,9 +98,15 @@ nav ul li a:hover{
     outline: none;
     padding: 10px;
     margin: 0px;
+    color: #000000 !important;
 }
 .search button{
     width: 50px;
+   
+}
+.search button :hover{
+    /* all: initial;  */
+    /* background-color: inherit; */
 }
 .button svg{
     /* width: 25px;
@@ -172,7 +178,7 @@ nav ul li a:hover{
     color: #5d5c5c;
 }
 .product-description:hover{
-    color: #F09116;
+    /* color: #F09116; */
 }
 
 .product-description-div{
@@ -234,21 +240,22 @@ del{
     width: 100%;
     padding: 20px 0px;
     border-width: 1px;
+    border-radius: 5px;
     border-style: solid;
-    border-color: gray;
+    border-color: rgba(128, 128, 128, 0.426);
     border-image: initial;
 }
-.item > div a{
+.item > div a {
     text-decoration: none;
     color: #000000;
 }
 
-.item > div:hover{
-    background-color:  #F09116;  
+.item > div:hover {
+    background-color: #00472cdd;
 }
 
-.item > div a:hover{
-    color: rgb(255, 255, 255);
+.item > div:hover a {
+    color: #fff;
 }
 
 
@@ -305,4 +312,24 @@ del{
 .themgiohang a{
     color: #fff;
     text-decoration: none;
+}
+.col-inner{
+    width: 1200px;
+    margin: auto;
+}
+.col-inner h3{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.col-inner ul{
+    font-weight: normal;
+    height: 204px;
+    font-size: 15px;
+    color: #515151;
+}
+.col-inner li{
+    margin: 5px 0px 10px 20px;
+}
+.col-inner strong{
+    color: #515151;
 }

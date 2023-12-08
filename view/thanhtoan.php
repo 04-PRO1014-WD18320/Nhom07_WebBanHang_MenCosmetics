@@ -22,45 +22,45 @@
      <div class="tt-donhang">
          <h2>Đơn Hàng Của Bạn</h2>
          <?php
-         $i = 0;
-         $tongsl = 0;
-         $tonggia= 0;
-        
-             foreach($listsanpham as $sp){
+            $i = 0;
+            $tongsl = 0;
+            $tonggia = 0;
+
+            foreach ($listsanpham as $sp) {
                 extract($sp);
                 $tongsl += $sp['soluong'];
-                $tonggia += $sp['soluong']* $sp['newprice'];
+                $tonggia += $sp['soluong'] * $sp['newprice'];
 
-         ?>
-            <div class="box-sp-donhang">
-                <img src="upload/<?=$sp['hinh']?>" alt="">
-                <div class="tt-sp-donhang">
-                    <p><strong><?= $sp['name']?></strong></p>
-                    <p>Giá:<?= number_format($sp['newprice']) ?> VNĐ</p>
-                    <p>Số lượng: <?=$sp['soluong']?></p>
-                    <p>Tổng: <?= number_format($sp['soluong']*$sp['newprice']) ?> VNĐ</p>
-                </div> 
-            </div>
+            ?>
+             <div class="box-sp-donhang">
+                 <img src="upload/<?= $sp['hinh'] ?>" alt="">
+                 <div class="tt-sp-donhang">
+                     <p><strong><?= $sp['name'] ?></strong></p>
+                     <p>Giá: <span><?= number_format($sp['newprice']) ?> ₫</span></p>
+                     <p>Số lượng: <?= $sp['soluong'] ?></p>
+                     <p>Tổng: <span><?= number_format($sp['soluong'] * $sp['newprice']) ?> ₫</span></p>
+                 </div>
+             </div>
 
-    <?php 
-        $i++;
-    } 
-        ?>
+         <?php
+                $i++;
+            }
+            ?>
 
          <?php
             $phivc = 20000;
             echo '
             <div class="tamtinh">
-                Tạm tính: <strong>' . number_format($tonggia) . 'Đ</strong>
+            <p>Tạm tính: <strong style="color:#F09116">' . number_format($tonggia) . '₫</strong></p>
             </div>';
-        ?>
+            ?>
          <hr>
 
          <div class="vanchuyen">
-             <h4>Giao Hàng</h4> 
-             <p>Phí vận chuyển: 20.000Đ</p>
-             <div class="tong"><strong >Tổng: <?php echo number_format($phivc + $tonggia) ?>Đ</strong></div>
-             <input type="hidden" name="tongtien" value="<?=$phivc + $tonggia?>">
+             <h4>Giao Hàng</h4>
+             <p>Phí vận chuyển: 20.000₫</p>
+             <div class="tong"><p>Tổng:<strong style="color:#F09116" > <?php echo number_format($phivc + $tonggia) ?>₫</strong></p></div>
+             <input type="hidden" name="tongtien" value="<?= $phivc + $tonggia ?>">
          </div>
          <hr>
          <div class="ht-thanhtoan">

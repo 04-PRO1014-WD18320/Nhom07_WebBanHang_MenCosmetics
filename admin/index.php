@@ -165,7 +165,7 @@ if (isset($_GET['act'])) {
             }
             break;
         case 'huy-don-hang':
-            if (isset($_GET['id_donhang']) && $_GET['id_donhang']  >0) {
+            if (isset($_GET['id_donhang']) && $_GET['id_donhang']  >0 ) {
                 $id_donhang = $_GET['id_donhang'];
                 huy_donhang($id_donhang);
             }

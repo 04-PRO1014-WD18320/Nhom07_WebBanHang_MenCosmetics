@@ -3,11 +3,17 @@
 
     <div class="product">
         <h4>Biểu đồ thống kê doanh thu theo tháng</h4>
+        <?php
+        $rows = doanhthutheothang();
+        $thang = $rows[0]['thang'];
+        $nam = $rows[0]['nam'];
+        echo  ' <p style="margin-left:600px">Tháng ' . $thang . '/' . $nam . '</p>';
+        ?>
+
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <canvas id="lineChart"></canvas>
 
         <?php
-        $rows = doanhthutheothang();
 
         if ($rows) {
             // Tạo mảng để chứa dữ liệu
@@ -15,15 +21,17 @@
 
             foreach ($rows as $row) {
                 $data[] = [
-                    'thang' => $row['thang'],
+                    'ngay' => $row['ngay'],
                     'doanhThu' => $row['tongDoanhThu']
                 ];
             }
             usort($data, function ($a, $b) {
-                return $a['thang'] - $b['thang'];
+                return $a['ngay'] - $b['ngay'];
             });
+            $thangNam = isset($data[0]['ngay']) ? date('m/Y', strtotime($data[0]['ngay'])) : '';
         }
         ?>
+
 
         <script>
             var ctxL = document.getElementById("lineChart").getContext('2d');
@@ -31,7 +39,7 @@
             var hasData = <?php echo isset($data) && !empty($data) ? 'true' : 'false'; ?>;
 
             if (hasData) {
-                var labels = <?php echo json_encode(array_column($data, 'thang')); ?>;
+                var labels = <?php echo json_encode(array_column($data, 'ngay')); ?>;
 
                 var doanhThu = <?php echo json_encode(array_column($data, 'doanhThu')); ?>;
 
@@ -114,9 +122,9 @@
                             echo "]);";
                             ?>
 
-                            // Tùy chọn cho biểu đồ
                             var options = {
                                 title: 'Thống kê trạng thái đơn hàng',
+                               
                                 is3D: true,
                                 colors: ['#FF9900', '#2AB0C2', '#0D9618', '#DC3911']
                             };

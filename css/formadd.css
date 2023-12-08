@@ -33,9 +33,10 @@ input {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  /* width: 100px; */
 }
 input:hover {
-  background-color: #adacac;
+  background-color: #adacac9d;
 }
 .submit {
   margin-top: 20px;
@@ -84,7 +85,7 @@ table {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   margin: 20px 30px 30px 16px;
   width: 65%;
 }

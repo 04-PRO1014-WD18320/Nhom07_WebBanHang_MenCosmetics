@@ -90,6 +90,7 @@
     $img = ['img/dm/daugoi.jpg', 'img/dm/suaruamat.jpg', 'img/dm/sap.jpg'];
     $i = 0;
     foreach ($dsdm as $dm) {
+      
         extract($dm);
         $linkdm = "index.php?act=sanpham&iddm=" . $id;
 
