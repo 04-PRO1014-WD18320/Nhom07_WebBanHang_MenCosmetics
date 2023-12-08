@@ -47,9 +47,26 @@
                             <td><?=$formattedPhoneNumber?></td>
                             <td><?=$ghichu?></td>
                             <td><?=$pttt?></td>
-                            <td><?= number_format($tongtien)?>₫</td>
-                            <td><?=$trangthai?></td>
-                            <td><a href="<?=$dhct?>">Xem chi tiết</a></td>
+                            <td><?= number_format($tongtien)?>Đ</td>
+                           <?php $class_ttdh = "";
+                        switch ($trangthai) {
+                            case 'Chờ xử lý':
+                                $class_ttdh ="btn-color-vang";
+                                break;
+                            case 'Đã xác nhận':
+                                $class_ttdh ="btn-color-xanhblue";
+                                break;
+                            case 'Đã hoàn thành':
+                                $class_ttdh = "btn-color-xanhgreen";
+                                break;
+                            case 'Đã hủy':
+                                $class_ttdh = "btn-color-red";
+                                break;
+                        }
+                        ?>
+                            <td><p class="<?=$class_ttdh?>"><?=$trangthai?></p></td>
+                            <td><a class="xemchitiet" href="<?=$dhct?>">Xem chi tiết</a></td>
+
                         </tr>
                         
                     <?php  endforeach; ?>

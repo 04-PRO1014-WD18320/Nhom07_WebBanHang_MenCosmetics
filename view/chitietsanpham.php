@@ -83,7 +83,7 @@
 
                     <?php if (!empty($_SESSION['user'])) : ?>
                         <input type="text" class="" name="noidung" placeholder="nội dung bình luận....">
-                        <input type="submit" name="guibinhluan" value="Gửi bình luận">
+                        <input type="submit" name="guibinhluan" value="Gửi bình luận" style="width: 300px; margin: auto;">
                     <?php
                     else :
                     ?>

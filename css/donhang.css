@@ -20,3 +20,26 @@
     background-color: #04AA6D;
     color: white;
   }
+
+  .btn-color-vang{
+    color: rgb(182, 182, 0);
+  }
+  .btn-color-xanhblue{
+    color: rgb(79, 79, 255);
+  }
+  .btn-color-xanhgreen{
+    color: rgb(0, 221, 0);
+  }
+  .btn-color-red{
+    color: red;
+  }
+
+  .xemchitiet{
+    text-decoration: none;
+    color: black;
+  }
+
+  .xemchitiet:hover{
+    color: rgb(78, 78, 119);
+    text-decoration: underline;
+  }
