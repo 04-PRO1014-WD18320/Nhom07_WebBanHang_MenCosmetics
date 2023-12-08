@@ -1,6 +1,6 @@
 <div class="dathangthanhcong">
     <img src="img/dathangthanhcong.png" alt="">
-    <H3>Đặt hàng thành công</H3>
+    <H4>Đặt hàng thành công</H4>
     <a href="index.php?act=home"><input type="submit" value="Quay về trang chủ"></a>
     <a href="index.php?act=donhang"><input type="submit" value="Xem đơn hàng của bạn"></a>
 </div>

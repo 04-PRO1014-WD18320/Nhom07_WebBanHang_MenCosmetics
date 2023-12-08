@@ -20,7 +20,7 @@
                     <input type="text" placeholder="Nhập email " name="email" value="<?=$email?>" required class="ip-text">
 
                     <div class="btn-dn"> 
-                        <input type="submit" value="lưu thay đổi" name="luuthaydoi">                      
+                        <input type="submit" value="Lưu thay đổi" name="luuthaydoi">                      
                     </div> 
                 </div>
 
@@ -31,7 +31,7 @@
                 ?>
                 
                   <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn"><a href="#">Cancel</a></button>
+                    <button type="button" class="cancelbtn" id="backButton"><a href="#">Cancel</a></button>
                     
                   </div>
                 </form>

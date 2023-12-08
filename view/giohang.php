@@ -30,9 +30,9 @@
         ?>
           <tr>
 
-            <td><img src="upload/<?= $hinh ?>" alt=""></td>
+            <td><img src="upload/<?= $hinh ?>"  alt=""></td>
             <td class="td-tt"><?= $name ?> </td>
-            <td class="td-tt"><?= $newprice ?></td>
+            <td class="td-tt"><?=number_format( $newprice) ?>₫</td>
             <td class="td-tt"><input type="number" min="1" step="1" value="<?= $soluong ?>" /></td>
 
             <td><a href="index.php?act=xoagiohang&id_giohang=<?= $id ?>" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này chứ ?')">Xóa</a></td>
@@ -42,7 +42,7 @@
 
     </table>
     <div class="btn-giohang">
-     <a href="index.php?act=xoatatcagiohang" onclick="return confirm('Bạn có chắc muốn xóa tất cả sản phẩm trong giỏ hàng ?')"><button type="button">xóa tất cả </button></a>
+     <a href="index.php?act=xoatatcagiohang" onclick="return confirm('Bạn có chắc muốn xóa tất cả sản phẩm trong giỏ hàng ?')"><button type="button">Xóa tất cả </button></a>
      <?php 
     extract($listgiohang) ;
     if (empty($listgiohang)) {

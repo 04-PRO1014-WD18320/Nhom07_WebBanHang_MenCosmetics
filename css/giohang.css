@@ -4,6 +4,19 @@
     width: 90%;
     margin: auto;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  .customers thead th{
+    text-align: center;
+  }
+  .customers td a{
+    /* border: 1px solid gray; */
+    padding: 10px 15px;
+    background-color: #00472cdd;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
   }
  main h5{
   margin: 10px 0px 10px 80px;

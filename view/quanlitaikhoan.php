@@ -11,7 +11,7 @@
     <input type="email" placeholder="" name="email" value="<?= $email ?>" disabled class="ip-text">
 
     <label for="psw"><b>SỐ ĐIỆN THOẠI</b></label>
-    <input type="email" placeholder="" name="tel" value=" +84 <?= $tel ?>" disabled class="ip-text">
+    <input type="email" placeholder="" name="tel" value=" <?= $tel ?>" disabled class="ip-text">
 
     <div class="btn-dx-dmk">
         <div><a href="index.php?act=updatetk"><button>CẬP NHẬT TÀI KHOẢN</button></a></div>

@@ -46,6 +46,16 @@ h2{
     margin-bottom: 20px;
     
 }
+.tt-sp-donhang strong{
+color: black;
+}
+.tt-sp-donhang p{
+    color: #575757;
+    font-size: 15px;
+}
+.tt-sp-donhang span{
+    color: #F09116 !important;
+}
 
 .box-sp-donhang img{
     width: 100px;
@@ -78,11 +88,11 @@ h2{
 .ht-thanhtoan input[type=submit]{
     padding: 10px;
     color: aliceblue;
-    background-color:  rgb(255, 130, 13);;
+    background-color:  #00472cdd;
 }
 
 .ht-thanhtoan input[type=submit]:hover{
-    background-color: rgb(255, 153, 57);
+    background-color: #00472c;
 }
 
 .ht-thanhtoan .btn-tt{
