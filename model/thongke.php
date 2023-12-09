@@ -75,9 +75,11 @@ function trangthai_donhang()
     $sql = "SELECT
     ttdh.id AS trangthai_id,
     ttdh.trangthai,
+    MONTH(dh.ngaydat) AS thang,
     COUNT(dh.id) AS tongtrangthai
 FROM donhang dh
 JOIN trangthaidonhang ttdh ON dh.id_trangthai = ttdh.id
-GROUP BY ttdh.id, ttdh.trangthai;";
+WHERE MONTH(dh.ngaydat) = MONTH(CURRENT_DATE())
+GROUP BY ttdh.id, ttdh.trangthai, thang;";
     return pdo_query($sql);
 }

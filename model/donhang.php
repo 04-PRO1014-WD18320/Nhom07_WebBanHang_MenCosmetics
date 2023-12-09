@@ -38,12 +38,12 @@ function loadall_donhang_admin()
 
 function update_donhang($id_trangthai, $id_donhang)
 {
-    $sql = "Update donhang set id_trangthai = $id_trangthai where id = $id_donhang";
+    $sql = "UPDATE donhang SET id_trangthai = $id_trangthai where id = $id_donhang";
     pdo_execute($sql);
 }
 function huy_donhang($id_donhang)
 {
-    $sql = "Update donhang set id_trangthai =4 where id = $id_donhang";
+    $sql = "UPDATE donhang SET id_trangthai =4 where id = $id_donhang";
     pdo_execute($sql);
 }
 function load_donhang_chitiet($id_donhang)
