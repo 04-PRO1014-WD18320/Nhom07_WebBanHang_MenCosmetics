@@ -45,6 +45,7 @@ if (isset($_GET['act'])) {
             }
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
+            break;
         case 'addsp':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $iddm = $_POST['iddm'];
@@ -134,7 +135,6 @@ if (isset($_GET['act'])) {
             include "home.php";
             break;
         case 'thongke':
-
             $rows = doanhthutheothang();
             $top5_banchay = top5_sanpham_banchay_theothang();
             $top5_doanhthu = top5_sanpham_doanhthu_caonhat_thang();
